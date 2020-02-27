@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="10" verbose="10" name="Failed suite [Command line suite]" data-provider-thread-count="1">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="org.xframium.driver.XMLTestDriver"/>
+    </classes>
+  </test> <!-- Command line test -->
+</suite> <!-- Failed suite [Command line suite] -->

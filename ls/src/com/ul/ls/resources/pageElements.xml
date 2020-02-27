@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<elementDefinition xmlns="http://www.xframium.org/pageRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/pageRegistry http://www.xframium.org/xsd/pageManagement/pageRegistry.xsd">
+  <site name="LS">
+    <page name="login" class="org.xframium.page.keyWord.KeyWordPage">
+      <element name="UNTxtbox" value="ctl00_C_10858_UserName" descriptor="ID" />
+      <element name="PWDTxtbox" value="ctl00_C_10858_Password" descriptor="ID" />
+      <element name="LoginBtn" value="//input[@value='Login']" descriptor="XPATH" />
+      <element name="MyLearningLink" value="//a[text()='My Learning']" descriptor="XPATH" />
+    </page>
+  </site>
+</elementDefinition>

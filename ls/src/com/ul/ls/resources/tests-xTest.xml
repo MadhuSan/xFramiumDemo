@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite xmlns="http://www.xframium.org/testRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/testRegistry http://www.xframium.org/xsd/pageManagement/testRegistry.xsd">
+  <test name="Login" active="true" priority="1">
+	<description>Login</description>
+	<step name="UNTxtbox" page="login" type="SET" >
+		<parameter type="STATIC" value="qaaccount"/>
+	</step >
+	<step name="PWDTxtbox" page="login" type="SET" >
+		<parameter type="STATIC" value="goldengate88" />
+	</step >
+	<step name="LoginBtn" page="login" type="CLICK" />
+  </test>
+</suite>
