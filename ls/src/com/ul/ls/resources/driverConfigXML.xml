@@ -18,7 +18,8 @@
   
   <model provider="XML" fileName="pageElements.xml" siteName="LS" />
   
-  <suite provider="XML" fileName="D:/workspace_ls/ls/src/com/ul/ls/resources/tests-xTest.xml"/>
+  <suite provider="XML" fileName="../ls/src/com/ul/ls/resources/tests-xTest.xml"/>
+  
 
  <!--  <data provider="XML" fileName="./data/testData.xml" /> -->
 </xFramium>

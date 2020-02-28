@@ -1,11 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elementDefinition xmlns="http://www.xframium.org/pageRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/pageRegistry http://www.xframium.org/xsd/pageManagement/pageRegistry.xsd">
   <site name="LS">
-    <page name="login" class="org.xframium.page.keyWord.KeyWordPage">
+    <page name="loginPage" class="org.xframium.page.keyWord.KeyWordPage">
       <element name="UNTxtbox" value="ctl00_C_10858_UserName" descriptor="ID" />
       <element name="PWDTxtbox" value="ctl00_C_10858_Password" descriptor="ID" />
       <element name="LoginBtn" value="//input[@value='Login']" descriptor="XPATH" />
       <element name="MyLearningLink" value="//a[text()='My Learning']" descriptor="XPATH" />
     </page>
+	<page name="homePage" class="org.xframium.page.keyWord.KeyWordPage">
+      <element name="QABtn" value="//ul[@id='profileMenu']/li/a[1]" descriptor="XPATH" />
+      <element name="AdmBtn" value="//a[text()='Administrator Tools']" descriptor="XPATH" />
+      <element name="OKBtn" value="//button[text()='OK']" descriptor="XPATH" />
+      <element name="ImageLogo" value="imgLogo" descriptor="ID" />
+      <element name="PeopleBtn" value="//ul[@id='menuOuter']/li[3]/ul/li[1]/a[1]" descriptor="XPATH" />
+      <element name="PplAndSecurityBtn" value="//ul[@id='menuOuter']//span[contains(.,' People')]" descriptor="XPATH" />
+      <element name="AddBtn" value="//div[@id='ctl00_C_tbr']//a[contains(.,'Add')]" descriptor="XPATH" />
+      <element name="NextBtn1" value="ctl00_C_wiz_StartNavigationTemplateContainerID_StartNextButton" descriptor="ID" />
+      <element name="NextBtn2" value="ctl00_C_wiz_StepNavigationTemplateContainerID_StepNextButton" descriptor="ID" />
+      <element name="UNTxtbox1" value="ctl00_C_wiz_txtUserName" descriptor="ID" />
+      <element name="PWDTxtbox2" value="ctl00_C_wiz_txtPassword" descriptor="ID" />
+      <element name="EMPIDTxtbox" value="ctl00_C_wiz_txtEmplid" descriptor="ID" />
+      <element name="NextBtn3" value="ctl00_C_wiz_StepNavigationTemplateContainerID_StepNextButton" descriptor="ID" />
+      <element name="NextBtn4" value="ctl00_C_wiz_StepNavigationTemplateContainerID_StepNextButton" descriptor="ID" />
+      <element name="CompanyDropdn" value="//button/span[@id='ctl00_C_wiz_cboDom1_Arrow']" descriptor="XPATH" />
+      <element name="AllRegBtn" value="//li[text()='All REG']" descriptor="XPATH" />
+      <element name="DaveDropdn" value="ctl00_C_wiz_cboDom2_Arrow" descriptor="ID" />
+      <element name="Domain2Btn" value="//li[text()='dsand test domain level #2']" descriptor="XPATH" />
+      <element name="DeptDropdn" value="ctl00_C_wiz_cboDom3_Arrow" descriptor="ID" />
+      <element name="DeptEditbtn" value="ctl00_C_wiz_lnkEdit3" descriptor="ID" />
+      <element name="AllDeptBtn" value="ctl00_C_audmapresource_grdDom_ctl00__0" descriptor="ID" />
+      <element name="AddBtn" value="ctl00_C_audmapresource_btnAdd" descriptor="ID" />
+      <element name="UpdateBtn" value="//img[@alt='Update']" descriptor="XPATH" />
+      <element name="Domain1Dropdn" value="ctl00_C_wiz_cboDom4_Arrow" descriptor="ID" />
+      <element name="Domain1Btn" value="//li[@class='rcbItem t-ripple-effect']" descriptor="XPATH" />
+      <element name="Domain2Dropdn" value="ctl00_C_wiz_cboDom5_Arrow" descriptor="ID" />
+      <element name="Domain2Btn" value="//div[@id='ctl00_C_wiz_cboDom5_DropDown']//li[1]" descriptor="XPATH" />
+     </page>
   </site>
 </elementDefinition>
