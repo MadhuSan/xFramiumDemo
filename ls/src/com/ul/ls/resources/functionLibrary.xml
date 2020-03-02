@@ -9,6 +9,7 @@
 
   <function name="loginFunction" active="true">
 	<description>Login</description>
+	<step name="MAXIMIZE" page="loginPage" type="BROWSER" />
 	<step name="UNTxtbox" page="loginPage" type="SET" >
 		<parameter type="STATIC" value="qaaccount"/>
 	</step >
@@ -16,6 +17,60 @@
 		<parameter type="STATIC" value="goldengate88" />
 	</step >
 	<step name="LoginBtn" page="loginPage" type="CLICK" />
+	<step name="QABtn.VISIBLE" page="homePage" type="WAIT_FOR" />
+	<step name="QABtn" page="homePage" type="EXISTS" />
+	<step name="QABtn" page="homePage" type="STATE" />
   </function>
+  
+   <function name="logoutFunction" active="true">
+	<description>Logout</description>
+	<step name="QABtn" page="homePage" type="CLICK" />
+	<step name="logoutBtn" page="homePage" type="CLICK" />
+  </function>
+  
+  <function name="navigateToAdministratorToolsFunction" active="true">
+	<description>Logout</description>
+	<step name="QABtn.CLICKABLE" page="homePage" type="WAIT_FOR">
+		<parameter type="STATIC" value="5" />   
+	</step >
+	<step name="QABtn" page="homePage" type="CLICK" />
+	<step name="AdmBtn.CLICKABLE" page="homePage" type="WAIT_FOR">
+		<parameter type="STATIC" value="5" />   
+	</step >
+	<step name="AdmBtn" page="homePage" type="CLICK" />
+	<step name="OKBtn" page="homePage" type="CLICK" />
+	<step name="ImageLogo" page="homePage" type="STATE" />
+  </function>
+  
+   <function name="navigateToMaintainPeopleandSecurityFunction" active="true">
+	<description>Navigate to Maintain People and Security</description>
+	<step name="PeopleBtn" page="peoplePage" type="CLICK" />
+	<step name="PplAndSecurityBtn" page="peoplePage" type="CLICK" />
+  </function>
+  
+  <function name="createPersonFunction" active="true">
+	<description>Create Person</description>
+	<step name="SWITCH_NAMED_FRAME" page="peoplePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	</step>
+	<step name="AddBtn" page="peoplePage" type="CLICK" />
+	<step name="NextBtn1" page="peoplePage" type="CLICK" />
+	<step name="NextBtn2" page="peoplePage" type="CLICK" />
+	<step name="UNTxtbox1" page="peoplePage" type="SET" >
+		<parameter type="STATIC" value="user_0302"/>
+	</step>
+	<step name="PWDTxtbox2" page="peoplePage" type="SET" >
+		<parameter type="STATIC" value="Test@123"/>
+	</step>
+	<step name="EMPIDTxtbox" page="peoplePage" type="SET" >
+		<parameter type="STATIC" value="03022020"/>
+	</step>
+	<step name="NextBtn3" page="peoplePage" type="CLICK" />
+	<step name="NextBtn4" page="peoplePage" type="CLICK" />
+	
+  </function>
+  
+  
+  
  
  </suite>

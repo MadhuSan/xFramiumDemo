@@ -8,9 +8,13 @@
 </model>
 
 
-  <test name="Login" active="true" priority="1">
+  <test name="createUser" active="true" priority="1">
 	<description>Login</description>
-	<step name="loginFunction" site="LS" page="loginPage" type="CALL2" />
+	<step name="loginFunction" type="CALL2" />
+	<step name="navigateToAdministratorToolsFunction" site="LS" type="CALL2" />
+	<step name="navigateToMaintainPeopleandSecurityFunction" site="LS" type="CALL2" />
+	<step name="createPersonFunction" site="LS" type="CALL2" />
+	<step name="logoutFunction" site="LS" type="CALL2" />
   </test>
 
 </suite>

@@ -5,15 +5,20 @@
   <driver suiteName="LS" type="WEB" outputFolder="test-output" displayResults="true" domain="PROFESSIONAL_SERVICES" 
   dryRun="false" embeddedServer="false" retryCount="0">
   
-    <property name="selenium.timeouts.implicitWait">3000</property>
     <property name="xFramium General KeyWord Test.count">3</property>
     <property name="selenium.timeouts.implicitWait">5000</property>
     <propertyAdapter className="org.xframium.device.property.SeleniumPropertyAdapter"></propertyAdapter>
     <artifact type="FAILURE_SOURCE" />
     <artifact type="DEVICE_LOG" />
     <artifact type="IMAGING_ANALYSIS" />
-    <artifact type="EXECUTION_REPORT_PDF"/>
-    
+    <artifact type="EXECUTION_RECORD_PDF"/>
+    <artifact type="EXECUTION_REPORT_CSV"/>
+    <artifact type="EXECUTION_RECORD_HTML"/>
+    <artifact type="EXECUTION_REPORT_XML"/>
+    <artifact type="CONSOLE_LOG"/>
+    <artifact type="GRID_REPORT"/>
+    <artifact type="GRID_HTML"/>
+    <artifact type="ALL_IN_ONE"/>
   </driver>
   
   <model provider="XML" fileName="pageElements.xml" siteName="LS" />

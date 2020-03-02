@@ -12,6 +12,9 @@
       <element name="AdmBtn" value="//a[text()='Administrator Tools']" descriptor="XPATH" />
       <element name="OKBtn" value="//button[text()='OK']" descriptor="XPATH" />
       <element name="ImageLogo" value="imgLogo" descriptor="ID" />
+    </page>
+    
+    <page name="peoplePage" class="org.xframium.page.keyWord.KeyWordPage"> 
       <element name="PeopleBtn" value="//ul[@id='menuOuter']/li[3]/ul/li[1]/a[1]" descriptor="XPATH" />
       <element name="PplAndSecurityBtn" value="//ul[@id='menuOuter']//span[contains(.,' People')]" descriptor="XPATH" />
       <element name="AddBtn" value="//div[@id='ctl00_C_tbr']//a[contains(.,'Add')]" descriptor="XPATH" />
@@ -35,6 +38,8 @@
       <element name="Domain1Btn" value="//li[@class='rcbItem t-ripple-effect']" descriptor="XPATH" />
       <element name="Domain2Dropdn" value="ctl00_C_wiz_cboDom5_Arrow" descriptor="ID" />
       <element name="Domain2Btn" value="//div[@id='ctl00_C_wiz_cboDom5_DropDown']//li[1]" descriptor="XPATH" />
+      <element name="logoutBtn" value="//a[text()='Logout']" descriptor="XPATH" />
      </page>
+     
   </site>
 </elementDefinition>
