@@ -53,6 +53,9 @@
 	<step name="SWITCH_NAMED_FRAME" page="peoplePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
 	</step>
+	<step name="AddBtn.CLICKABLE" page="peoplePage" type="WAIT_FOR">
+		<parameter type="STATIC" value="5" />   
+	</step >
 	<step name="AddBtn" page="peoplePage" type="CLICK" />
 	<step name="NextBtn1" page="peoplePage" type="CLICK" />
 	<step name="NextBtn2" page="peoplePage" type="CLICK" />
@@ -66,8 +69,7 @@
 		<parameter type="STATIC" value="03022020"/>
 	</step>
 	<step name="NextBtn3" page="peoplePage" type="CLICK" />
-	<step name="NextBtn4" page="peoplePage" type="CLICK" />
-	
+	<step name="NextBtn4" page="peoplePage" type="CLICK" />	
   </function>
   
   

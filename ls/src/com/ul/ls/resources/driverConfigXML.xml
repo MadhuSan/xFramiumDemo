@@ -1,5 +1,5 @@
 <xFramium xmlns="http://www.xframium.org/xFramiumDriver" xmlns:xsi=" http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/xFramiumDriver http://www.xframium.org/xsd/xFramiumDriver.xsd">
-  <application provider="XML" fileName="applicationRegistry.xml" name="LS" />
+  <application provider="XML" fileName="applicationRegistry.xml" name="LS176" />
   <cloud provider="XML" fileName="cloudRegistry.xml" name="local" />
   <devices provider="XML" fileName="deviceRegistry.xml" />
   <driver suiteName="LS" type="WEB" outputFolder="test-output" displayResults="true" domain="PROFESSIONAL_SERVICES" 

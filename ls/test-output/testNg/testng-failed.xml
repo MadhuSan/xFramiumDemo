@@ -6,4 +6,16 @@
       <class name="org.xframium.driver.XMLTestDriver"/>
     </classes>
   </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="org.xframium.driver.XMLTestDriver">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterSuite"/>
+          <include name="testDriver" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- org.xframium.driver.XMLTestDriver -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->
