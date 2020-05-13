@@ -1,3 +1,10 @@
 <deviceRegistry xsi:schemaLocation="http://www.xframium.org/deviceRegistry http://www.xframium.org/xsd/deviceManagement/deviceRegistry.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.xframium.org/deviceRegistry">
   	<device browserVersion="79" browserName="Chrome" os="Windows" osVersion="10" model="chrome" manufacturer="Google" availableDevices="1" driverType="WEB" name="Windows 10 Chrome 79" cloud="SELENIUM" active="true"/>
+  	<device browserVersion="63" browserName="Firefox" os="Windows" osVersion="10"  availableDevices="1" driverType="WEB" name="Windows 10 Firefox 63" cloud="SELENIUM" active="false"/>
+	<device browserVersion="82" browserName="Edge" os="Windows" osVersion="10"  availableDevices="1" driverType="WEB" name="Windows 10 Edge 82" cloud="SELENIUM" active="false"/>
+		
+	<!-- <device browserVersion="11" browserName="IE" os="Windows" osVersion="10"  availableDevices="1" driverType="WEB" name="Windows 10 IE 11" cloud="SELENIUM" active="true"> -->
+	<device browserName="internet explorer" model="IE" manufacturer="Microsoft" availableDevices="1" driverType="WEB" name="windows 10 ie local"  active="false">
+		<capability name="ignoreProtectedModeSettings" class="BOOLEAN">true</capability>
+ 	</device>
 </deviceRegistry>	

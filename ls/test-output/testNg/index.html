@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Command_line_suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Command_line_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="org.xframium.driver.XMLTestDriver" hash-for-method="testDriver(org.xframium.device.ng.TestContainer@7efed6a5)">testDriver(org.xframium.device.ng.TestContainer@7efed6a5)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Command_line_suite" title="org.xframium.driver.XMLTestDriver" hash-for-method="testDriver(org.xframium.device.ng.TestContainer@736c897a)">testDriver(org.xframium.device.ng.TestContainer@736c897a)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Command_line_suite -->
@@ -125,12 +125,22 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testDriver(org.xframium.device.ng.TestContainer@7efed6a5)">
-                  </a> <!-- testDriver(org.xframium.device.ng.TestContainer@7efed6a5) -->
+                  <a name="testDriver(org.xframium.device.ng.TestContainer@736c897a)">
+                  </a> <!-- testDriver(org.xframium.device.ng.TestContainer@736c897a) -->
                   <span class="method-name">testDriver</span>
-                  <span class="parameters">(org.xframium.device.ng.TestContainer@7efed6a5)</span>
-                  <div class="stack-trace">Could not locate elements using By.xpath: (//div[@id=&apos;rfdSubMenu1583413326939&apos;]//li)[26]
+                  <span class="parameters">(org.xframium.device.ng.TestContainer@736c897a)</span>
+                  <div class="stack-trace">unknown error: unhandled inspector error: {&quot;code&quot;:-32000,&quot;message&quot;:&quot;Cannot find context with specified id&quot;}
+  (Session info: chrome=79.0.3945.88)
+Build info: version: &apos;3.13.0&apos;, revision: &apos;2f0d292&apos;, time: &apos;2018-06-25T15:24:21.231Z&apos;
+System info: host: &apos;MLBMYSL-106608&apos;, ip: &apos;10.13.58.43&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\MADHU~1.SAN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61842}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e5ed5f8b9557632541d4d334a70...}
+Session ID: e5ed5f8b9557632541d4d334a70a7c88
 	at org.xframium.page.keyWord.step.AbstractKeyWordStep.executeStep(AbstractKeyWordStep.java:1325)
+	at org.xframium.page.keyWord.KeyWordTest.executeTest(KeyWordTest.java:529)
+	at org.xframium.page.keyWord.KeyWordDriver.executionFunction(KeyWordDriver.java:495)
+	at org.xframium.page.keyWord.step.spi.KWSCall2._executeStep(KWSCall2.java:148)
+	at org.xframium.page.keyWord.step.AbstractKeyWordStep.executeStep(AbstractKeyWordStep.java:1216)
 	at org.xframium.page.keyWord.KeyWordTest.executeTest(KeyWordTest.java:529)
 	at org.xframium.page.keyWord.KeyWordDriver.executionFunction(KeyWordDriver.java:495)
 	at org.xframium.page.keyWord.step.spi.KWSCall2._executeStep(KWSCall2.java:148)
@@ -173,18 +183,6 @@
       &lt;class name=&quot;org.xframium.driver.XMLTestDriver&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
-  &lt;test name=&quot;Command line test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;org.xframium.driver.XMLTestDriver&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;beforeMethod&quot;/&gt;
-          &lt;include name=&quot;afterMethod&quot;/&gt;
-          &lt;include name=&quot;afterSuite&quot;/&gt;
-          &lt;include name=&quot;testDriver&quot; invocation-numbers=&quot;0&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- org.xframium.driver.XMLTestDriver --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Command line test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,9 +195,6 @@
             <ul>
               <li>
                 <span class="test-name">Command line test (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Command line test(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -229,12 +224,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testDriver')
 data.setCell(0, 2, 'org.xframium.driver.XMLTestDriver')
-data.setCell(0, 3, 27662);
+data.setCell(0, 3, 31347);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 27 seconds</span>
+              <span class="suite-total-time">Total running time: 31 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -268,16 +263,16 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testDriver(org.xframium.device.ng.TestContainer@7efed6a5)</span>
-                <span class="method-start">17420 ms</span>
+                <span class="method-name">testDriver(org.xframium.device.ng.TestContainer@736c897a)</span>
+                <span class="method-start">15725 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod(public void org.xframium.driver.XMLTestDriver.testDriver(org.xframium.device.ng.TestContainer) throw...)</span>
-                <span class="method-start">45083 ms</span>
+                <span class="method-start">47073 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
-                <span class="method-name">afterSuite(org.testng.TestRunner@6739d1dc)</span>
-                <span class="method-start">49635 ms</span>
+                <span class="method-name">afterSuite(org.testng.TestRunner@538fac06)</span>
+                <span class="method-start">51581 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

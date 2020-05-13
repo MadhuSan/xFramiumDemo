@@ -2,6 +2,7 @@
 <applicationRegistry xmlns="http://www.xframium.org/applicationRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/applicationRegistry http://www.xframium.org/xsd/deviceManagement/applicationRegistry.xsd">
 
   <application name="LS" url="https://weekly.learnshare.com/authenticate/login.brand.aspx?CID=94" />
-  <application url="https://weekly.learnshare.com/authenticate/login.brand.aspx?CID=176 " name="LS176"/>
+  <application url="https://lms2.learnshare.com/authenticate/login.brand.aspx?CID=252" name="LS176"/>
+  <application url="https://qa.learnshare.com/authenticate/login.brand.aspx?CID=176" name="LSOA176"/>
 
 </applicationRegistry>

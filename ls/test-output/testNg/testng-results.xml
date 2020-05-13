@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="49631" started-at="2020-03-05T14:30:04Z" finished-at="2020-03-05T14:30:54Z">
+  <suite name="Command line suite" duration-ms="51573" started-at="2020-05-13T14:12:13Z" finished-at="2020-05-13T14:13:05Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="49631" started-at="2020-03-05T14:30:04Z" finished-at="2020-03-05T14:30:54Z">
+    <test name="Command line test" duration-ms="51573" started-at="2020-05-13T14:12:13Z" finished-at="2020-05-13T14:13:05Z">
       <class name="org.xframium.driver.XMLTestDriver">
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@410e94e]" name="beforeMethod" is-config="true" duration-ms="17420" started-at="2020-03-05T20:00:04Z" finished-at="2020-03-05T20:00:22Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@2822c6ff]" name="beforeMethod" is-config="true" duration-ms="15725" started-at="2020-05-13T10:12:13Z" finished-at="2020-05-13T10:12:29Z">
           <params>
             <param index="0">
               <value>
@@ -16,33 +16,49 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[Ljava.lang.Object;@672d672f]]>
+                <![CDATA[[Ljava.lang.Object;@287b84d5]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[org.testng.TestRunner@6739d1dc]]>
+                <![CDATA[org.testng.TestRunner@538fac06]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="testDriver(org.xframium.device.ng.TestContainer)[pri:0, instance:org.xframium.driver.XMLTestDriver@410e94e]" name="testDriver" duration-ms="27662" started-at="2020-03-05T20:00:22Z" data-provider="deviceManager" finished-at="2020-03-05T20:00:49Z">
+        <test-method status="FAIL" signature="testDriver(org.xframium.device.ng.TestContainer)[pri:0, instance:org.xframium.driver.XMLTestDriver@2822c6ff]" name="testDriver" duration-ms="31347" started-at="2020-05-13T10:12:29Z" data-provider="deviceManager" finished-at="2020-05-13T10:13:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.xframium.device.ng.TestContainer@7efed6a5]]>
+                <![CDATA[org.xframium.device.ng.TestContainer@736c897a]]>
               </value>
             </param>
           </params>
           <exception class="org.xframium.exception.ScriptConfigurationException">
             <message>
-              <![CDATA[Could not locate elements using By.xpath: (//div[@id='rfdSubMenu1583413326939']//li)[26]]]>
+              <![CDATA[unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot find context with specified id"}
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'MLBMYSL-106608', ip: '10.13.58.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\MADHU~1.SAN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61842}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e5ed5f8b9557632541d4d334a70...}
+Session ID: e5ed5f8b9557632541d4d334a70a7c88]]>
             </message>
             <full-stacktrace>
-              <![CDATA[Could not locate elements using By.xpath: (//div[@id='rfdSubMenu1583413326939']//li)[26]
+              <![CDATA[unknown error: unhandled inspector error: {"code":-32000,"message":"Cannot find context with specified id"}
+  (Session info: chrome=79.0.3945.88)
+Build info: version: '3.13.0', revision: '2f0d292', time: '2018-06-25T15:24:21.231Z'
+System info: host: 'MLBMYSL-106608', ip: '10.13.58.43', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_91'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\MADHU~1.SAN\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:61842}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webdriver.remote.sessionid: e5ed5f8b9557632541d4d334a70...}
+Session ID: e5ed5f8b9557632541d4d334a70a7c88
 	at org.xframium.page.keyWord.step.AbstractKeyWordStep.executeStep(AbstractKeyWordStep.java:1325)
+	at org.xframium.page.keyWord.KeyWordTest.executeTest(KeyWordTest.java:529)
+	at org.xframium.page.keyWord.KeyWordDriver.executionFunction(KeyWordDriver.java:495)
+	at org.xframium.page.keyWord.step.spi.KWSCall2._executeStep(KWSCall2.java:148)
+	at org.xframium.page.keyWord.step.AbstractKeyWordStep.executeStep(AbstractKeyWordStep.java:1216)
 	at org.xframium.page.keyWord.KeyWordTest.executeTest(KeyWordTest.java:529)
 	at org.xframium.page.keyWord.KeyWordDriver.executionFunction(KeyWordDriver.java:495)
 	at org.xframium.page.keyWord.step.spi.KWSCall2._executeStep(KWSCall2.java:148)
@@ -71,7 +87,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDriver -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@410e94e]" name="afterMethod" is-config="true" duration-ms="4531" started-at="2020-03-05T20:00:49Z" finished-at="2020-03-05T20:00:54Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method, [Ljava.lang.Object;, org.testng.ITestResult, org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@2822c6ff]" name="afterMethod" is-config="true" duration-ms="4482" started-at="2020-05-13T10:13:00Z" finished-at="2020-05-13T10:13:05Z">
           <params>
             <param index="0">
               <value>
@@ -80,28 +96,28 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[[Ljava.lang.Object;@672d672f]]>
+                <![CDATA[[Ljava.lang.Object;@287b84d5]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[[TestResult name=testDriver status=FAILURE method=XMLTestDriver.testDriver(org.xframium.device.ng.TestContainer)[pri:0, instance:org.xframium.driver.XMLTestDriver@410e94e] output={null}]]]>
+                <![CDATA[[TestResult name=testDriver status=FAILURE method=XMLTestDriver.testDriver(org.xframium.device.ng.TestContainer)[pri:0, instance:org.xframium.driver.XMLTestDriver@2822c6ff] output={null}]]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[org.testng.TestRunner@6739d1dc]]>
+                <![CDATA[org.testng.TestRunner@538fac06]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@410e94e]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-03-05T20:00:54Z" finished-at="2020-03-05T20:00:54Z">
+        <test-method status="PASS" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:org.xframium.driver.XMLTestDriver@2822c6ff]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-05-13T10:13:05Z" finished-at="2020-05-13T10:13:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6739d1dc]]>
+                <![CDATA[org.testng.TestRunner@538fac06]]>
               </value>
             </param>
           </params>

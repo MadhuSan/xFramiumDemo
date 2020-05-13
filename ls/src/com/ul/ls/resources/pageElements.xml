@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <elementDefinition xmlns="http://www.xframium.org/pageRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/pageRegistry http://www.xframium.org/xsd/pageManagement/pageRegistry.xsd">
-  <site name="LS">
+  
+  <!-- <site name="LS">
     <page name="loginPage" class="org.xframium.page.keyWord.KeyWordPage">
-      <element name="UNTxtbox" value="ctl00_C_10858_UserName" descriptor="ID" />
-      <element name="PWDTxtbox" value="ctl00_C_10858_Password" descriptor="ID" />
-      <element name="LoginBtn" value="//input[@value='Login']" descriptor="XPATH" />
+      <element name="UNTxtbox" value="input[id$='UserName']" descriptor="CSS" />
+      <element name="PWDTxtbox" value="input[id$='Password']" descriptor="CSS" />
+      <element name="LoginBtn" value="input[value='Login']" descriptor="CSS" />
       <element name="MyLearningLink" value="//a[text()='My Learning']" descriptor="XPATH" />
       </page>
       <page name="homePage" class="org.xframium.page.keyWord.KeyWordPage">
@@ -42,7 +43,6 @@
       <element name="Domain3Btn" value="//li[@class='rcbHovered t-ripple-effect']" descriptor="XPATH" />
       <element name="TestDomDropdn" value="ctl00_C_wiz_cboDom7_Arrow" descriptor="ID" />
       <element name="TestDomBtn" value="//li[@class='rcbHovered t-ripple-effect']" descriptor="XPATH" />
-      
       <element name="JobRoleDropdn" value="ctl00_C_wiz_cboDom8_Arrow" descriptor="ID" />
       <element name="JobRoleBtn" value="//*[contains(text(),'Account Manager')]" descriptor="XPATH" />
       <element name="LocationDropdn" value="ctl00_C_wiz_cboDom9_Arrow" descriptor="ID" />
@@ -59,48 +59,134 @@
       <element name="NextBtn5" value="ctl00_C_wiz_StepNavigationTemplateContainerID_StepNextButton" descriptor="ID" />
       <element name="IQTxtbox" value="ctl00_C_wiz_PersonProperty_txt2107" descriptor="ID" />
       <element name="FinishBtn" value="ctl00_C_wiz_FinishNavigationTemplateContainerID_FinishButton" descriptor="ID" />
-      
-      
     </page>
-  </site>
+  </site> -->
   
   
-  <site name="LS176">
+  <site name="LS">
+  
     <page name="loginPage" class="org.xframium.page.keyWord.KeyWordPage">
-  	<element name="UNTxtbox" value="ctl00_C_8028_UserName" descriptor="ID" />
-  	<element name="PWDTxtbox" value="ctl00_C_8028_Password" descriptor="ID" />
-  	<element name="LoginBtn" value="//input[@value='Login']" descriptor="XPATH" />
+  	 <element name="UNTxtbox" value="input[id$='UserName']" descriptor="CSS" />
+      <element name="PWDTxtbox" value="input[id$='Password']" descriptor="CSS" />
+      <element name="LoginBtn" value="input[value='Login']" descriptor="CSS" />
   	</page>
   	
   	<page name="homePage" class="org.xframium.page.keyWord.KeyWordPage">
-  	<element name="CompanyDropdn" value="//*[contains(text(),'ELMSAuto Admin')]" descriptor="XPATH" />
-  	<element name="AdminBtn" value="468724" descriptor="ID" />
-  	<element name="OKBtn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
-  	<element name="ResourcesBtn" value="//i[@class='sv-slim-icon fas fa-book-open']" descriptor="XPATH" />
+  	<element name="CompanyDropdn" value="a[class='dropdown-toggle small']" descriptor="CSS" />
+  	<element name="AdminBtn" value="Administrator Tools" descriptor="LINK_TEXT" />
+  	<element name="OK1Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+  	<element name="NavBtn" value="//li//div[@class='sidenav-top-dark']" descriptor="XPATH" />
+  	<element name="ResourcesBtn" value="//span[contains(.,'Maintain Learning Resources')]//ancestor::div[1]//preceding-sibling::a/i" descriptor="XPATH" />
   	<element name="LearningResourcesBtn" value="//span[contains(text(),'Maintain Learning Resources')]" descriptor="XPATH" />
+  	</page>
+  	
+  	<page name="LearningResourcesPage" class="org.xframium.page.keyWord.KeyWordPage">
+  	<element name="MainTitleTxtBox" value="ctl00_C_txtTitle" descriptor="ID" />
   	<element name="NewBtn" value="//span[@class='rtbText' and contains(text(),'New')]" descriptor="XPATH" />
   	<element name="TypeOfResourceDropdn" value="Skinnedctl00_C_cboType" descriptor="ID" />
-  	<element name="AssignementsBtn" value="//li[contains(text(),'Assignment')]" descriptor="XPATH" />
+  	<element name="TypeofResource" value="//li[contains(text(),'{resourceType}')]" descriptor="XPATH" />
   	<element name="ResourceStatusDropdn" value="Skinnedctl00_C_cboStatus" descriptor="ID" />
   	<element name="ActiveBtn" value="//li[contains(text(),'Active')]" descriptor="XPATH" />
   	<element name="MediaDropdn" value="Skinnedctl00_C_cboMedia" descriptor="ID" />
-  	<element name="OnlineBtn" value="(//div[@id='rfdSubMenu1583413326939']//li)[26]" descriptor="XPATH" />
+  	<element name="TypeofMedia" value="//li[contains(text(),'{mediaType}')]" descriptor="XPATH" />
   	<element name="ProviderDropdn" value="Skinnedctl00_C_cboProvider" descriptor="ID" />
   	<element name="LearnshareBtn" value="//li[contains(text(),'LearnShare')] " descriptor="XPATH" />
   	<element name="ApprovalDropdn" value="Skinnedctl00_C_cboApproval" descriptor="ID" />
   	<element name="DefaultAppBtn" value="//li[contains(text(),'Default Approval Process')]" descriptor="XPATH" />
-  	<element name="Save1Btn" value="//span[contains(text(),'Save')] " descriptor="XPATH" />
+  	<element name="Save1Btn" value="//span[@title='Save' and @class='rtbButton']" descriptor="XPATH" />
+  	<element name="TrainingPlanBtn" value="//li[contains(text(),'Training Plan / Certificate Program')]" descriptor="XPATH" />
+  	<element name="CertificateBtn" value="(//div[@class='rfdSelectBox rfdSelectBox_Material rfdSelectBoxDropDown']//li)[8]" descriptor="XPATH" />
+  	<element name="SearchbyTitleTxtBox" value="//span[@class='rfdDropDownArrow p-icon p-i-arrow-down']" descriptor="XPATH" />
+  	<element name="MediaBtn" value="(//li[@class='t-ripple-effect'])[5]" descriptor="ID" />
+  	<element name="MediaTypeDropdn" value="(//span[@class='rfdDropDownArrow p-icon p-i-arrow-down'])[2]" descriptor="ID" />
+  	<element name="CertificateOptionBtn" value="(//li[@class='t-ripple-effect'])[4]" descriptor="XPATH" />
+  	<element name="SearchTxtBox" value="//*[@class='rfdTextInput']" descriptor="XPATH" />
+  	<element name="SearchResourceBtn" value="//input[@type='submit']" descriptor="XPATH" />
+  	<element name="FirstCertificate" value="(//tr[@class='rgRow'])[1]" descriptor="XPATH" />
+  	<element name="EditBtn" value="//span[@title='Edit']" descriptor="XPATH" />
+  	<element name="ShortDescription" value="ctl00_C_txtShortDescription" descriptor="ID" />
+  	<element name="SaveandCloseBtn" value="//span[@title='Save and Close' and @class='rtbButton']" descriptor="XPATH" />
+  	<element name="EditedShortDescription" value="//*[contains(text(),'Editing or updating....')]" descriptor="XPATH" />
+  	<element name="FileManagerBtn" value="//span[contains(text(),'File Manager')]" descriptor="XPATH" />
+  	<element name="UploadFileBtn" value="//span[contains(text(),'Upload')]" descriptor="XPATH" />
+  	<element name="SelectFiletoUploadBtn" value="//li[@class='ruSelectWrap']" descriptor="XPATH" />
+  	<element name="SetStartingLinkBtn" value="//span[contains(text(),'Set Starting Link')]" descriptor="XPATH" />
+  	<element name="OK2Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+  	</page>
+  	
+  	<page name="On-LinePage" class="org.xframium.page.keyWord.KeyWordPage">
+  	<element name="closeBtn" value="//li[@class='rwListItem']" descriptor="XPATH" />
+  	<element name="On-LineBtn" value="//span[@class='rtsTxt' and contains(text(),'On-Line')]" descriptor="XPATH" />
+  	<element name="VerifyLocationpath" value="(//input[@class='rfdTextInput'])[1]" descriptor="XPATH" />
+  	<element name="ScoreModelDropdn" value="(//span[@class='rfdDropDownArrow p-icon p-i-arrow-down'])[3]" descriptor="XPATH" />
+  	<element name="DropdnValue" value="(//li[@class='t-ripple-effect'])[2]" descriptor="XPATH" />
+  	<element name="SaveandCloseBtn" value="(//*[contains(text(),'Save and Close')])[1]" descriptor="XPATH" />
+  	</page>
+  	
+  	
+  	<page name="AssignmentPage" class="org.xframium.page.keyWord.KeyWordPage">
   	<element name="AssignmentBtn" value="//span[@title='Assignment'] " descriptor="XPATH" />
   	<element name="InstructionalTXTbox" value="//body[@style='height: auto; min-height: 66px;']" descriptor="XPATH" />
   	<element name="AddBtn" value="//span[contains(text(),'Add')]" descriptor="XPATH" />
-  	<element name="DescriptionTXTBox" value="ctl00_C_grdAssignmentFileGroups_ctl00_ctl03_ctl01_txtAssignmentTitle" descriptor="XPATH" />
+  	<element name="DescriptionTXTBox" value="ctl00_C_grdAssignmentFileGroups_ctl00_ctl03_ctl01_txtAssignmentTitle" descriptor="ID" />
   	<element name="Instructional2TXTBox" value="//body[@style='height: auto; min-height: 86px;']" descriptor="XPATH" />
   	<element name="AllowManagerReview" value="_rfdSkinnedctl00_C_chkManagerReview" descriptor="ID" />
   	<element name="Save2Btn" value="ctl00_C_grdAssignmentFileGroups_ctl00_ctl03_ctl01_btnAssignmentUpdate" descriptor="ID" />
-  	<element name="AudienceBtn" value="//span[@title='Audience']" descriptor="XPATH" />
+  	</page>
+  	
+  	<page name="AudiencePage" class="org.xframium.page.keyWord.KeyWordPage">
+  	<element name="AudienceBtn" value="//span[@class='rtsTxt' and contains(text(),'Audience')]" descriptor="XPATH" />
   	<element name="AddAudienceBtn" value="ctl00_C_btnAddAudience" descriptor="ID" />
   	<element name="AudienceDropdn" value="ctl00_C_cboTemplate_Input" descriptor="ID" />
+  	<element name="AudienceTitleTXTBox" value="ctl00_C_txtTitle" descriptor="ID" />
+  	<element name="AudienceUpdateBtn" value="//span[contains(text(),'Update')]" descriptor="XPATH" />
+  	<element name="SelectAudiBtn" value="//*[contains(text(),'Audi-010')]" descriptor="XPATH" />
+  	<element name="RequiredActivityBtn" value="//*[contains(text(),'Required Activity in Development Plan')]" descriptor="XPATH" />
+  	<element name="PeopleTabBtn" value="//span[@title='People']" descriptor="XPATH" />
+  	<element name="SearchTXTBox" value="ctl00_C_audmap_radPeople_Input" descriptor="ID" />
+  	<!-- <element name="AdminELMS(7192110)Btn" value="(//li[@class='rcbItem'])[2]" descriptor="XPATH" /> -->
+  	<element name="AdminELMS(7192110)Btn" value="(//li[@class='rcbItem'])" descriptor="XPATH" />
+  	<element name="AddPPLBtn" value="//input[@name='ctl00$C$audmap$btnAddPerson']" descriptor="XPATH" />
+  	<element name="AdminELMSAutoBtn" value="(//li[@class='rcbItem'])[3]" descriptor="XPATH" />
+  	<element name="SaveandCloseBtn" value="(//*[contains(text(),'Save and Close')])[1]" descriptor="XPATH" />
     </page>
+    
+    <page name="ManageCertificatePage" class="org.xframium.page.keyWord.KeyWordPage">
+    <element name="ManageCertificateBtn" value="(//*[contains(text(),'Manage Certificate')])[1]" descriptor="XPATH" />
+    <element name="OK2Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+    <element name="NewLevelBtn" value="//*[contains(text(),'New Level')]" descriptor="XPATH" />
+    <element name="AddResourcesBtn" value="(//*[contains(text(),'Add Resources')])[1]" descriptor="XPATH" />
+    <element name="Newlevelexpand" value="//div[@id='ctl00_C_trvR']//following::span[@class='rtPlus']" descriptor="XPATH" />
+    <element name="SearchByDropdn" value="//div[@id='ctl00_ctl00_C_ddlSearchByPanel']" descriptor="XPATH" />
+    <element name="CourseTitleBtn" value="(//*[contains(text(),'Course Title')])[1]" descriptor="XPATH" />
+    <element name="CourseTXTBox" value="//input[@name='ctl00$C$txtSearch']" descriptor="XPATH" />
+    <element name="Droplocation" value="//span[@class='rtText' and contains(text(),'New Level')]" descriptor="XPATH" />
+    <element name="SearchBtn" value="ctl00_C_btnGo" descriptor="ID" />
+    <element name="CompliancewireBtn" value="//*[@class='rtText' and contains(text(),'test1 (AutoLs / 2012192)')]" descriptor="XPATH" />
+    <element name="Update2Btn" value="//*[@class='rtbText' and contains(text(),'Update')]" descriptor="XPATH" />
+    <element name="SaveandClose" value="//li//span[text()='Add Resources']/preceding::li[1]" descriptor="XPATH" />
+    <element name="OK3Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+    <element name="UpdateCertificateBtn" value="//*[contains(text(),'Update Certificate')]" descriptor="XPATH" />
+    <element name="CloseBtn" value="//span[@title='Close']" descriptor="XPATH" />
+    <element name="CloseResources" value="closeSysMenu" descriptor="ID" />
+    <!-- <element name="NavigationBtn" value="//*[@class='rounded-circle z-depth-0' and @id='imgProfile']" descriptor="XPATH" /> -->
+    <element name="NavigationBtn" value="//li[@class='nav-item avatar dropdown']" descriptor="XPATH" />
+    <element name="LearnerViewBtn" value="//*[contains(text(),'Exit to Learner View')]" descriptor="XPATH" />
+    <element name="OK4Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+    
+    </page>
+    
+    
+    <page name="LearnerViewPage" class="org.xframium.page.keyWord.KeyWordPage">
+    <element name="MyLearningBtn" value="(//*[contains(text(),'My Learning')])[2]" descriptor="XPATH" />
+    <element name="ToDoBtn" value="//a[contains(text(),'Learning Plan')]" descriptor="XPATH" />
+    <element name="Active06" value="//*[contains(text(),'Active-06')]" descriptor="XPATH" />
+    </page>
+    
+    <page name="EditexistingLScoursePage" class="org.xframium.page.keyWord.KeyWordPage">
+    
+    </page>
+    
   </site>
 </elementDefinition>
 
