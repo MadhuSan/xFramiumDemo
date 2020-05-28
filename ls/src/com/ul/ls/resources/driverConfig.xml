@@ -8,7 +8,7 @@
     <property name="selenium.timeouts.implicitWait">3000</property>
     <property name="xFramium General KeyWord Test.count">3</property>
     <property name="selenium.timeouts.implicitWait">5000</property>
-    <propertyAdapter className="org.xframium.device.property.SeleniumPropertyAdapter"></propertyAdapter>
+    <property name="integrations.import">integrations.ul</property>
     <artifact type="FAILURE_SOURCE" />
     <artifact type="DEVICE_LOG" />
     <artifact type="IMAGING_ANALYSIS" />

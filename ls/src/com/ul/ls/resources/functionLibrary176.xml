@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?><suite xmlns="http://www.xframium.org/testRegistry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xframium.org/testRegistry http://www.xframium.org/xsd/pageManagement/testRegistry.xsd">
+
+<model>
+     <page name="loginPage"/>
+     <page name="homePage"/>
+     <page name="LearningResourcesPage"/>
+     <page name="AssignmentPage"/>
+     <page name="AudiencePage"/>
+     <page name="ManageCertificatePage"/>
+     <page name="LearnerViewPage"/>
+</model>
+
+
+  <function name="loginFunction" active="true">
+     <description>Login</description>
+     <step name="UNTxtbox.VISIBLE" page="loginPage" type="WAIT_FOR">
+     	<parameter type="STATIC" value="30"/>
+     </step>
+     <step name="UNTxtbox" page="loginPage" type="SET" >
+            <parameter type="DATA" value="Login.UserName"/>
+     </step >
+     <step name="PWDTxtbox" page="loginPage" type="SET" >
+            <parameter type="DATA" value="Login.Password" />
+     </step >
+     <step name="LoginBtn" page="loginPage" type="CLICK" />
+     <step name="MAXIMIZE" page="loginPage" type="BROWSER" />
+  </function>
+  
+  <function name="navigateToAdministratorTools" active="true">
+     <description>navToLearning</description>
+     <step name="CompanyDropdn" page="homePage" type="waitAndClick"/>
+     <step name="AdminBtn" page="homePage" type="waitAndClick" />
+     <step name="OK1Btn" page="homePage" type="waitAndClick" />
+  </function>
+  
+  
+  
+  <function name="navigateToLearningResouce" active="true">
+     <description>navToLearning</description>
+     <step name="ResourcesBtn" page="homePage" type="waitAndClick" />
+     <step name="LearningResourcesBtn" page="homePage" type="waitAndClick" />
+     
+  </function>   
+  
+  
+  
+  <function name="enterResourceDetails" active="true">
+     <description>overViewTabFunction</description>
+     <step name="TypeOfResourceDropdn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="TypeofResource" page="LearningResourcesPage" type="CLICK" >
+         <token type="CONTEXT" name="resourceType" value="resourceToSelect"/>
+     </step>
+     <step name="wait" type="WAIT"/>
+    <step name="MainTitleTxtBox" page="LearningResourcesPage" type="waitAndClick"/>
+     <step name="MainTitleTxtBox" page="LearningResourcesPage" type="SET" >
+            <parameter type="STATIC" value="Resource_020"/>
+     </step >
+     
+     <step name="ResourceStatusDropdn" page="LearningResourcesPage" type="waitAndClick" />   
+     <step name="ActiveBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="MediaDropdn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="TypeofMedia" page="LearningResourcesPage" type="CLICK" >
+     	<token type="CONTEXT" name="mediaType" value="mediaToSelect"/>
+     </step>
+     <step name="ProviderDropdn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="LearnshareBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="ApprovalDropdn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="DefaultAppBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="wait" type="WAIT" />
+     <step name="Save1Btn" page="LearningResourcesPage" type="waitAndClick" />
+   </function>
+      
+   <function name="assignmentsTabFunction" active="true">
+     <description>assignmentsTabFunction</description>
+     <step name="AssignmentBtn" page="AssignmentPage" type="CLICK" />
+     <step name="SWITCH_INDEX" page="AssignmentPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Index" value="0"/> 
+	 </step>
+     <step name="InstructionalTXTbox" page="AssignmentPage" type="SET" >
+            <parameter type="STATIC" value="automation..test..."/>
+     </step >
+     <step name="PARENT_FRAME" page="AssignmentPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	 </step>
+     <step name="AddBtn" page="AssignmentPage" type="CLICK" />
+     <step name="DescriptionTXTBox" page="AssignmentPage" type="SET" >
+            <parameter type="STATIC" value="automation..test123"/>
+     </step >
+     <step name="SWITCH_INDEX" page="AssignmentPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Index" value="1"/> 
+	 </step>
+     <step name="Instructional2TXTBox" page="AssignmentPage" type="SET" >
+            <parameter type="STATIC" value="automation..test..."/>
+     </step >
+     <step name="PARENT_FRAME" page="AssignmentPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	</step>
+     <step name="AllowManagerReview" page="AssignmentPage" type="CLICK" />
+     <step name="Save2Btn" page="homePage" type="CLICK" />   
+  </function>
+  
+  <function name="audienceTabFunction" active="true">
+     <description>audienceTabFunction</description>
+     <step name="AudienceBtn" page="AudiencePage" type="CLICK" />
+     <step name="AddAudienceBtn" page="AudiencePage" type="CLICK" />
+     <step name="AudienceDropdn" page="AudiencePage" type="CLICK" />
+   </function> 
+   
+   <function name="newLeaningResourcebtn" active="true">
+     <description>createnewLeaningResourcebtn</description>
+     <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	 </step> 
+	 <step name="NewBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="NewBtn" page="LearningResourcesPage" type="CLICK" />
+   </function>
+   
+   <function name="CreateALevelOrSelectExistingLevelOnTheLeftBlockUnderTheCreatedResourceAndClickOnAddResources" active="true">
+     <description>CreateALevelOrSelectExistingLevelOnTheLeftBlockUnderTheCreatedResourceAndClickOnAddResources</description>
+     <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
+	 </step>
+	 <step name="NewLevelBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="AddResourcesBtn" page="ManageCertificatePage" type="waitAndClick" />
+   </function>
+   
+   <function name="SelectCourseTitleInSearchByDropdownSearchOnlineOrTestInCourseTitleAndClickOnSEARCH" active="true">
+     <description>TestInCourseTitleAndClickOnSEARCH</description>
+     <step name="SWITCH_INDEX" page="ManageCertificatePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Index" value="1"/> 
+	 </step>
+     <step name="SearchByDropdn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="CourseTitleBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="CourseTXTBox" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="CourseTXTBox" page="ManageCertificatePage" type="SET" >
+            <parameter type="DATA" value="Login.Course_Name"/>
+     </step >
+     <!-- <step name="NewLevelexpand" page="ManageCertificatePage" type="CLICK" /> -->
+     <step name="SearchBtn" page="ManageCertificatePage" type="waitAndClick" />
+   </function>
+   
+   <function name="SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate" active="true">
+     <description>SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate</description>
+     <step name="CompliancewireBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="CompliancewireBtn" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="PRESS"/> 
+	 </step>
+	 <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="MOVE_TO"/> 
+	 </step>
+     <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="RELEASE"/> 
+	 </step>
+	 <step name="wait" type="WAIT" />
+	 <step name="CompliancewireBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="CompliancewireBtn" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="PRESS"/> 
+	 </step>
+	 <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="MOVE_TO"/> 
+	 </step>
+     <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
+  		<parameter type="STATIC" name="Mouse Action" value="RELEASE"/> 
+	 </step>
+     <step name="Update2Btn" page="ManageCertificatePage" type="waitAndClick" />
+	 <step name="PARENT_FRAME" site="LS176" page="ManageCertificatePage" type="BROWSER" />
+	 <step name="wait" type="WAIT" />
+   </function>
+   
+   <function name="AddAudience" active="true">
+     <description>AddAudience</description>
+     <step name="DEFAULT_FRAME" site="New Test" page="Search" type="BROWSER" />
+     <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	 </step>
+     <step name="AudienceBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="AddAudienceBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
+	 </step>
+	 <step name="AudienceTitleTXTBox" page="AudiencePage" type="WaitAndClick" />
+      <step name="AudienceTitleTXTBox" page="AudiencePage" type="SET" >
+            <parameter type="DATA" value="Login.Audience"/>
+     </step >
+     <step name="AudienceUpdateBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="DEFAULT_FRAME" site="LS176" page="Search" type="BROWSER" />
+     <step name="SWITCH_NAMED_FRAME" page="AudiencePage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
+	 </step>
+     <!-- <step name="SelectAudiBtn" page="AudiencePage" type="CLICK" /> -->
+     <step name="RequiredActivityBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="PeopleTabBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="SearchTXTBox" page="AudiencePage" type="waitAndClick" />
+     <step name="SearchTXTBox" page="AudiencePage" type="SET" >
+            <parameter type="DATA" value="Login.People"/>
+     </step >
+     
+     <step name="AdminELMS(7192110)Btn" page="AudiencePage" type="waitAndClick" />
+     <step name="AddPPLBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="SaveandCloseBtn" page="AudiencePage" type="waitAndClick" />
+	 <step name="CloseResources" page="ManageCertificatePage" type="waitAndClick" />
+	 <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" />
+	 <step name="DEFAULT_FRAME" site="LS176" page="Search" type="BROWSER" />
+     <step name="NavigationBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="LearnerViewBtn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" />
+     <step name="wait" type="WAIT" />
+     <step name="ACCEPT" page="ManageCertificatePage" type="ALERT" />
+     <step name="wait" type="WAIT" />
+   </function>
+   
+   <function name="IsCourseAddedInLearnersPlan" active="true">
+     <description>IsCourseAddedInLearnersPlan</description>
+     <step name="MyLearningBtn" page="LearnerViewPage" type="CLICK" />
+     <step name="ToDoBtn" page="LearnerViewPage" type="CLICK" />
+     <step name="Active06" page="LearnerViewPage" type="CLICK" />
+   </function>
+   
+   <function name="TC2056-Pre-requisit" active="true">
+   <description>audienceTabFunction</description>
+     <step name="loginFunction" page="loginPage" type="CALL2" />
+     <step name="navigateToAdministratorTools" type="CALL2" />
+     <step name="navigateToLearningResouce" type="CALL2" />
+   </function>
+     
+   <function name="TC2056-TestStep1-ClickonNewTabAtTheTopMenuBar" active="true">
+     <step name="newLeaningResourcebtn" type="CALL2" />
+   </function>
+     
+   <function name="TC2056-TestStep2-MakeSureThatTheFollowingFieldsShouldSelected/entered." active="true">
+     <step name="enterResourceDetails" type="CALL2"> 
+     	<parameter type="STATIC" name="resourceToSelect" value="Training Plan / Certificate Program"/>
+     	<parameter type="STATIC" name="mediaToSelect" value="Certificate"/>
+     </step>
+    </function>
+     
+    <function name="TC2056-TestStep3-GoToManageCertificateAndClickOnIt." active="true">
+     <step name="ManageCertificateBtn" page="ManageCertificatePage" type="waitAndClick" />
+    </function>
+    
+     <function name="TC2056-TestStep4-ClickOnOKButton." active="true">
+     <step name="OK2Btn" page="ManageCertificatePage" type="waitAndClick" />
+    </function>
+     
+    <function name="TC2056-TestStep5-CreateALevelOrSelectExistingLevelOnTheLeftBlockUnderTheCreatedResourceAndClickOnAddResources." active="true">
+     <step name="CreateALevelOrSelectExistingLevelOnTheLeftBlockUnderTheCreatedResourceAndClickOnAddResources" site="LS176" page="LearningResourcesPage" type="CALL2" />
+	</function>
+	 
+	 
+	<function name="TC-2056-TestStep6-SelectCourseTitleInSearchByDropdownSearchOnlineOrTestInCourseTitleAndClickOnSEARCH." active="true">
+	 <step name="SelectCourseTitleInSearchByDropdownSearchOnlineOrTestInCourseTitleAndClickOnSEARCH" site="LS176"  type="CALL2" />
+    </function>
+     
+    <function name="TC-2056-TestStep7-SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate." active="true">
+      <step name="SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate" site="LS176"  type="CALL2" />
+	</function>
+     
+    <function name="TC-2056-TestStep8-ClickOnSaveAndSaveAndClose." active="true">	
+     <step name="wait" type="WAIT"/>
+     <step name="SaveandClose" page="ManageCertificatePage" type="CLICK" />
+	</function>
+	 
+	 
+	<function name="TC-2056-TestStep9-AddAudience" active="true">
+	 <step name="AddAudience" site="LS176"  type="CALL2" />
+   	</function>
+   	
+   <function name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" active="true">
+     <step name="IsCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+   </function>
+   
+   <function name="TC2057-Pre-requisit" active="true">
+     <step name="loginFunction" site="LS176" page="loginPage" type="CALL2" />
+     <step name="navigateToAdministratorTools" site="LS176" type="CALL2" />
+     <step name="navigateToLearningResouce" site="LS176" type="CALL2" />
+   </function>
+   
+   <function name="TC2057-Edit-an-existing-LS-course" active="true">
+   	 <step name="SearchbyTitleTxtBox" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="MediaBtn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="MediaTypeDropdn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="CertificateOptionBtn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="SearchTxtBox" page="LearningResourcesPage" type="SET" >
+            <parameter type="STATIC" value="Alpha-10"/>
+     </step >
+   	 <step name="SearchResourceBtn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="FirstCertificate" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="EditBtn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="ShortDescription" page="LearningResourcesPage" type="SET" >
+            <parameter type="STATIC" value="Editing or Updating"/>
+     </step >
+     <step name="SaveandCloseBtn" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="FirstCertificate" page="LearningResourcesPage" type="CALL2" />
+   	 <step name="EditBtn" page="LearningResourcesPage" type="CALL2" />
+   	 <!-- Verifying....or assert  -->
+   </function>
+   
+   <function name="TC2076-TestStep1-EntervalidusernameandpasswordandlogintotheLSapplication" active="true">
+     <step name="loginFunction" site="LS176" page="loginPage" type="CALL2" />
+   </function>
+   
+   <function name="TC2076-TestStep2 and 3-GotoAdminprofile-->ClickonAdministratorTools" active="true">
+     <step name="navigateToAdministratorTools" site="LS176" type="CALL2" />
+   </function>
+   
+   <function name="TC2076-TestStep4-GotoResources-->ClickonMaintainLearningResources" active="true">
+     <step name="navigateToLearningResouce" site="LS176" type="CALL2" />
+   </function>
+   
+   <function name="TC2076-TestStep5-ClickonNewbuttonatthetopmenubar" active="true">
+     <step name="newLeaningResourcebtn" site="LS176" type="CALL2" />
+   </function>
+   
+   <function name="TC2076-TestStep6-enterResourceDetails" active="true">
+     <step name="enterResourceDetails" site="LS176" type="CALL2"> 
+     	<parameter type="STATIC" name="resourceToSelect" value="On-Line Training/CBT"/>
+     	<parameter type="STATIC" name="mediaToSelect" value="Online"/>
+     </step>
+   </function>
+   
+   <function name="TC2076-TestStep7-ClickonFileManageratthetopmenubar" active="true">
+     <!-- <step name="FileManagerBtn" page="LearningResourcesPage" type="CLICK" />
+	 <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
+	 </step>
+	 <step name="UploadFileBtn" page="LearningResourcesPage" type="CLICK" />
+	 <step name="wait" type="WAIT" />
+	 <step name="SelectFiletoUploadBtn" page="LearningResourcesPage" type="CLICK" />
+	 <step name="SelectFiletoUploadBtn" site="LS176" page="LearningResourcesPage" type="SET" >
+            <parameter type="STATIC" value="D:\test.pdf"/>
+     </step >
+     <step name="wait" type="WAIT" />
+     <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
+  		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
+	 </step>
+	 <step name="wait" type="WAIT" />
+     <step name="SetStartingLinkBtn" page="LearningResourcesPage" type="CLICK" /> -->
+     <step name="wait" type="WAIT" />
+   </function>
+   
+   <function name="TC2076-TestStep11-ClickonOKandGotToOnlineTabr" active="true">
+     <!-- <step name="OK2Btn" page="LearningResourcesPage" type="CLICK" />
+     <step name="wait" type="WAIT" /> -->
+     <step name="On-LineBtn" page="On-LinePage" type="CLICK" />
+     <step name="ScoreModelDropdn" page="On-LinePage" type="CLICK" />
+     <step name="DropdnValue" page="On-LinePage" type="CLICK" />
+     <!-- <step name="VerifyLocationpath" page="On-LinePage" type="GET" >
+		<parameter type="STATIC" value="Location" />
+	 </step> -->
+	 <step name="SaveandCloseBtn" page="On-LinePage" type="CLICK" />
+   </function>
+   
+   <function name="TC-2076-TestStep14-" active="true">
+   	 <step name="SearchTxtBox" page="LearningResourcesPage" type="CLICK" />
+   	 <step name="SearchTxtBox" site="LS176" page="LearningResourcesPage" type="SET" >
+            <parameter type="STATIC" value="Resource_020"/>
+     </step >
+     
+	 <step name="AddAudience" site="LS176"  type="CALL2" />
+   	</function>
+   
+   
+   <function name="TC-2076-TestStep15-AddAudience" active="true">
+	 <step name="AddAudience" site="LS176"  type="CALL2" />
+   	</function>
+   
+   <function name="TC-2076-TestStep16-IsCourseAddedInLearnersPlan" active="true">
+     <step name="IsCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+   </function>
+   
+   
+   
+   
+</suite>

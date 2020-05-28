@@ -1,0 +1,64 @@
+#
+# Cloud Registry
+#
+cloudRegistry.provider=XML
+cloudRegistry.fileName=../ls/src/com/ul/ls/resources/cloudRegistry.xml
+cloudRegistry.cloudUnderTest=local
+
+#
+# Application Registry
+#
+applicationRegistry.provider=XML
+applicationRegistry.fileName=../ls/src/com/ul/ls/resources/applicationRegistry.xml
+applicationRegistry.applicationUnderTest=LS176
+
+#
+# Artifact Production
+# 
+artifactProducer.provider=Perfecto
+artifactProducer.parentFolder=test-output
+#artifactProducer.automated=EXECUTION_REPORT_XML,FAILURE_SOURCE,DEVICE_LOG
+artifactProducer.automated=EXECUTION_REPORT_HTML,FAILURE_SOURCE,CONSOLE_LOG,WCAG_REPORT,EXECUTION_RECORD_CSV,EXECUTION_RECORD_HTML
+
+
+#
+# Page Object Configuration
+#
+pageManagement.siteName=LS
+pageManagement.provider=XML
+pageManagement.fileName=../ls/src/com/ul/ls/resources/pageElements.xml
+pageManagement.pageData.provider=EXCEL
+#pageManagement.pageData.provider=XML
+pageManagement.pageData.fileName=../ls/src/com/ul/ls/resources/testData.xlsx
+#pageManagement.pageData.fileName=../xmlDriven/RSP/RSPpageData.xml
+#sheetnames --pageManagement.pageData.tabNames
+pageManagement.pageData.tabNames=Login
+
+#
+# Device Management
+#
+#deviceManagement.provider=RESERVED - NAMED - AVAILABLE  CSV
+deviceManagement.provider=XML
+deviceManagement.driverType=WEB
+deviceManagement.fileName=../ls/src/com/ul/ls/resources/deviceRegistry.xml
+#deviceManagement.provider=NAMED
+#deviceManagement.driverType=WEB
+#deviceManagement.fileName=03CFD89423C2CD4A
+
+#
+# Driver Configuration
+#
+driver.frameworkType=XML
+driver.configName=D:\\ls\\src\\com\\ul\\ls\\resources\\tests-xTest.xml
+
+
+# Config for implicit waits
+driver.propertyAdapters=org.xframium.device.property.SeleniumPropertyAdapter
+selenium.timeouts.implicitWait=60000
+selenium.timeouts.pageLoad=45000
+selenium.timeouts.setScript=30000
+
+# keywords integration
+#
+integrations.import=integrations.ul
+integrations.ul.initialization=com.ul.keyWords.KeywordInitializer

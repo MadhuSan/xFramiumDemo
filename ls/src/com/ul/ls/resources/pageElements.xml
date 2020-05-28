@@ -90,7 +90,7 @@
   	<element name="MediaDropdn" value="Skinnedctl00_C_cboMedia" descriptor="ID" />
   	<element name="TypeofMedia" value="//li[contains(text(),'{mediaType}')]" descriptor="XPATH" />
   	<element name="ProviderDropdn" value="Skinnedctl00_C_cboProvider" descriptor="ID" />
-  	<element name="LearnshareBtn" value="//li[contains(text(),'LearnShare')] " descriptor="XPATH" />
+  	<element name="LearnshareBtn" value="//li[text()='LearnShare'] " descriptor="XPATH" />
   	<element name="ApprovalDropdn" value="Skinnedctl00_C_cboApproval" descriptor="ID" />
   	<element name="DefaultAppBtn" value="//li[contains(text(),'Default Approval Process')]" descriptor="XPATH" />
   	<element name="Save1Btn" value="//span[@title='Save' and @class='rtbButton']" descriptor="XPATH" />
