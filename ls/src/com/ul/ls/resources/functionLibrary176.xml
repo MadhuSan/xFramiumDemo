@@ -53,7 +53,7 @@
      <step name="wait" type="WAIT"/>
     <step name="MainTitleTxtBox" page="LearningResourcesPage" type="waitAndClick"/>
      <step name="MainTitleTxtBox" page="LearningResourcesPage" type="SET" >
-            <parameter type="STATIC" value="Resource_020"/>
+            <parameter type="DATA" value="Login.Resource_Title"/>
      </step >
      
      <step name="ResourceStatusDropdn" page="LearningResourcesPage" type="waitAndClick" />   
@@ -62,10 +62,10 @@
      <step name="TypeofMedia" page="LearningResourcesPage" type="CLICK" >
      	<token type="CONTEXT" name="mediaType" value="mediaToSelect"/>
      </step>
-     <step name="ProviderDropdn" page="LearningResourcesPage" type="waitAndClick" />
+<!--      <step name="ProviderDropdn" page="LearningResourcesPage" type="waitAndClick" />
      <step name="LearnshareBtn" page="LearningResourcesPage" type="waitAndClick" />
      <step name="ApprovalDropdn" page="LearningResourcesPage" type="waitAndClick" />
-     <step name="DefaultAppBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="DefaultAppBtn" page="LearningResourcesPage" type="waitAndClick" /> -->
      <step name="wait" type="WAIT" />
      <step name="Save1Btn" page="LearningResourcesPage" type="waitAndClick" />
    </function>
@@ -120,7 +120,13 @@
      <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
 	 </step>
+	  <step name="wait" type="WAIT">
+	  	<parameter type="STATIC" value="15"/>
+	  </step>
 	 <step name="NewLevelBtn" page="ManageCertificatePage" type="waitAndClick" />
+	 <step name="wait" type="WAIT">
+	  	<parameter type="STATIC" value="15"/>
+	  </step>
      <step name="AddResourcesBtn" page="ManageCertificatePage" type="waitAndClick" />
    </function>
    
@@ -129,6 +135,7 @@
      <step name="SWITCH_INDEX" page="ManageCertificatePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Index" value="1"/> 
 	 </step>
+	 <step name="wait" type="WAIT"/>
      <step name="SearchByDropdn" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CourseTitleBtn" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CourseTXTBox" page="ManageCertificatePage" type="waitAndClick" />
@@ -173,6 +180,7 @@
      <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
 	 </step>
+	  <step name="wait" type="WAIT"/>
      <step name="AudienceBtn" page="AudiencePage" type="waitAndClick" />
      <step name="AddAudienceBtn" page="AudiencePage" type="waitAndClick" />
      <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
@@ -187,33 +195,46 @@
      <step name="SWITCH_NAMED_FRAME" page="AudiencePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
 	 </step>
+	  <step name="wait" type="WAIT"/>
      <!-- <step name="SelectAudiBtn" page="AudiencePage" type="CLICK" /> -->
      <step name="RequiredActivityBtn" page="AudiencePage" type="waitAndClick" />
      <step name="PeopleTabBtn" page="AudiencePage" type="waitAndClick" />
-     <step name="SearchTXTBox" page="AudiencePage" type="waitAndClick" />
-     <step name="SearchTXTBox" page="AudiencePage" type="SET" >
+     <step name="AddPeopleDd" page="AudiencePage" type="waitAndClick" />
+     <step name="AddPeopleDd" page="AudiencePage" type="SET" >
             <parameter type="DATA" value="Login.People"/>
      </step >
-     
-     <step name="AdminELMS(7192110)Btn" page="AudiencePage" type="waitAndClick" />
-     <step name="AddPPLBtn" page="AudiencePage" type="waitAndClick" />
+     <step name="AddPeopleDd" page="AudiencePage" type="SET" >
+            <parameter type="STATIC" value="ENTER"/>
+            <parameter type="STATIC" value="Keys"/>
+     </step >
+     <step name="wait" type="WAIT"/>
+     <step name="AddPPLBtn" page="AudiencePage" type="waitAndClick"/>
      <step name="SaveandCloseBtn" page="AudiencePage" type="waitAndClick" />
-	 <step name="CloseResources" page="ManageCertificatePage" type="waitAndClick" />
-	 <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" />
-	 <step name="DEFAULT_FRAME" site="LS176" page="Search" type="BROWSER" />
-     <step name="NavigationBtn" page="ManageCertificatePage" type="waitAndClick" />
-     <step name="LearnerViewBtn" page="ManageCertificatePage" type="waitAndClick" />
-     <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" />
-     <step name="wait" type="WAIT" />
-     <step name="ACCEPT" page="ManageCertificatePage" type="ALERT" />
-     <step name="wait" type="WAIT" />
+     <step name="wait" type="WAIT">
+     	<parameter type="STATIC" value="15"/>
+     </step>
+     </function>
+     <function name="ExitToLMS">
+		 <step name="CloseResources" page="ManageCertificatePage" type="waitAndClick" />
+		 <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" />
+		 <step name="DEFAULT_FRAME" site="LS176" page="Search" type="BROWSER" />
+	     <step name="NavigationBtn" page="ManageCertificatePage" type="waitAndClick" />
+	     <step name="wait" type="WAIT"/>
+	     <step name="LearnerViewBtn" page="ManageCertificatePage" type="waitAndClick" />
+		 <step name="wait" type="WAIT"/>
+	     <step name="OK4Btn" page="ManageCertificatePage" type="waitAndClick" /> 
+	     <step name="wait" type="WAIT" />
+	     <step name="ACCEPT" page="ManageCertificatePage" type="ALERT" />
+	     <step name="wait" type="WAIT" />
    </function>
    
    <function name="IsCourseAddedInLearnersPlan" active="true">
      <description>IsCourseAddedInLearnersPlan</description>
      <step name="MyLearningBtn" page="LearnerViewPage" type="CLICK" />
      <step name="ToDoBtn" page="LearnerViewPage" type="CLICK" />
-     <step name="Active06" page="LearnerViewPage" type="CLICK" />
+     <step name="Active06" page="LearnerViewPage" type="CLICK" >
+     	<token type="DATA" name="resourceToSearch" value="Login.Resource_Title"/>
+     </step>
    </function>
    
    <function name="TC2056-Pre-requisit" active="true">
@@ -235,6 +256,7 @@
     </function>
      
     <function name="TC2056-TestStep3-GoToManageCertificateAndClickOnIt." active="true">
+     <step name="wait" type="WAIT" />
      <step name="ManageCertificateBtn" page="ManageCertificatePage" type="waitAndClick" />
     </function>
     
@@ -263,6 +285,7 @@
 	 
 	<function name="TC-2056-TestStep9-AddAudience" active="true">
 	 <step name="AddAudience" site="LS176"  type="CALL2" />
+	 <step name="ExitToLMS" site="LS176"  type="CALL2" />
    	</function>
    	
    <function name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" active="true">

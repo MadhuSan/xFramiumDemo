@@ -145,8 +145,8 @@
   	<element name="PeopleTabBtn" value="//span[@title='People']" descriptor="XPATH" />
   	<element name="SearchTXTBox" value="ctl00_C_audmap_radPeople_Input" descriptor="ID" />
   	<!-- <element name="AdminELMS(7192110)Btn" value="(//li[@class='rcbItem'])[2]" descriptor="XPATH" /> -->
-  	<element name="AdminELMS(7192110)Btn" value="(//li[@class='rcbItem'])" descriptor="XPATH" />
-  	<element name="AddPPLBtn" value="//input[@name='ctl00$C$audmap$btnAddPerson']" descriptor="XPATH" />
+  	<element name="AddPeopleDd" value="input[name$='radPeople']" descriptor="CSS" />
+  	<element name="AddPPLBtn" value="input[name$='AddPerson']" descriptor="CSS" />
   	<element name="AdminELMSAutoBtn" value="(//li[@class='rcbItem'])[3]" descriptor="XPATH" />
   	<element name="SaveandCloseBtn" value="(//*[contains(text(),'Save and Close')])[1]" descriptor="XPATH" />
     </page>
@@ -180,7 +180,7 @@
     <page name="LearnerViewPage" class="org.xframium.page.keyWord.KeyWordPage">
     <element name="MyLearningBtn" value="(//*[contains(text(),'My Learning')])[2]" descriptor="XPATH" />
     <element name="ToDoBtn" value="//a[contains(text(),'Learning Plan')]" descriptor="XPATH" />
-    <element name="Active06" value="//*[contains(text(),'Active-06')]" descriptor="XPATH" />
+    <element name="Active06" value="//*[contains(text(),'{resourceToSearch}')]" descriptor="XPATH" />
     </page>
     
     <page name="EditexistingLScoursePage" class="org.xframium.page.keyWord.KeyWordPage">

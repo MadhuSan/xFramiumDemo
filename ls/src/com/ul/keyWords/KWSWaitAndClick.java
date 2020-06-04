@@ -3,6 +3,8 @@ package com.ul.keyWords;
 import java.time.Duration;
 import java.util.Map;
 
+import javax.lang.model.util.Elements;
+
 import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.NoSuchElementException;
@@ -38,8 +40,8 @@ public class KWSWaitAndClick extends AbstractKeyWordStep {
 	{
 		Element element = getElement( pageObject, contextMap, webDriver, dataMap, executionContext );
 		FluentWait<WebDriver> wait = new FluentWait<WebDriver>(webDriver);
-			 wait.pollingEvery(Duration.ofSeconds(3));
-			 wait.withTimeout(Duration.ofMinutes(5));
+			 wait.pollingEvery(Duration.ofSeconds(2));
+			 wait.withTimeout(Duration.ofMinutes(10));
 			 wait.ignoring(NoSuchElementException.class)
 			 	 .ignoring(ElementClickInterceptedException.class)
 			 	 .ignoring(StaleElementReferenceException.class)
