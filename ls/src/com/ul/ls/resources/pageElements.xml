@@ -162,7 +162,7 @@
     <element name="CourseTXTBox" value="//input[@name='ctl00$C$txtSearch']" descriptor="XPATH" />
     <element name="Droplocation" value="//span[@class='rtText' and contains(text(),'New Level')]" descriptor="XPATH" />
     <element name="SearchBtn" value="ctl00_C_btnGo" descriptor="ID" />
-    <element name="CompliancewireBtn" value="//*[@class='rtText' and contains(text(),'test1 (AutoLs / 2012192)')]" descriptor="XPATH" />
+    <element name="CompliancewireBtn" value="//span[contains(.,'{courseToAdd}')]" descriptor="XPATH" />
     <element name="Update2Btn" value="//*[@class='rtbText' and contains(text(),'Update')]" descriptor="XPATH" />
     <element name="SaveandClose" value="//li//span[text()='Add Resources']/preceding::li[1]" descriptor="XPATH" />
     <element name="OK3Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
@@ -173,14 +173,16 @@
     <element name="NavigationBtn" value="//li[@class='nav-item avatar dropdown']" descriptor="XPATH" />
     <element name="LearnerViewBtn" value="//*[contains(text(),'Exit to Learner View')]" descriptor="XPATH" />
     <element name="OK4Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+    <element name="newLevelExpandButton" value="//div[@id='ctl00_C_trvR']//following::span[@class='rtPlus']" descriptor="XPATH" />
     
     </page>
     
     
     <page name="LearnerViewPage" class="org.xframium.page.keyWord.KeyWordPage">
-    <element name="MyLearningBtn" value="(//*[contains(text(),'My Learning')])[2]" descriptor="XPATH" />
-    <element name="ToDoBtn" value="//a[contains(text(),'Learning Plan')]" descriptor="XPATH" />
-    <element name="Active06" value="//*[contains(text(),'{resourceToSearch}')]" descriptor="XPATH" />
+	    <element name="MyLearningBtn" value="(//*[contains(text(),'My Learning')])[2]" descriptor="XPATH" />
+	    <element name="ToDoBtn" value="//a[contains(text(),'Learning Plan')]" descriptor="XPATH" />
+	    <element name="Active06" value="//*[contains(text(),'{resourceToSearch}')]" descriptor="XPATH" />
+	    <element name="courseToBeOpened" value="//a[contains(text(),'{courseToOpen}')]" descriptor="XPATH" />
     </page>
     
     <page name="EditexistingLScoursePage" class="org.xframium.page.keyWord.KeyWordPage">

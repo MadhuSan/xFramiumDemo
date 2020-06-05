@@ -136,11 +136,13 @@
   		<parameter type="STATIC" name="Frame Index" value="1"/> 
 	 </step>
 	 <step name="wait" type="WAIT"/>
+	 <step name="newLevelExpandButton" page="ManageCertificatePage" type="waitAndClick"/>
+	 <step name="wait" type="WAIT"/>
      <step name="SearchByDropdn" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CourseTitleBtn" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CourseTXTBox" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CourseTXTBox" page="ManageCertificatePage" type="SET" >
-            <parameter type="DATA" value="Login.Course_Name"/>
+            <parameter type="DATA" value="Login.Course_Type"/>
      </step >
      <!-- <step name="NewLevelexpand" page="ManageCertificatePage" type="CLICK" /> -->
      <step name="SearchBtn" page="ManageCertificatePage" type="waitAndClick" />
@@ -148,9 +150,12 @@
    
    <function name="SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate" active="true">
      <description>SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate</description>
-     <step name="CompliancewireBtn" page="ManageCertificatePage" type="waitAndClick" />
-     <step name="CompliancewireBtn" page="ManageCertificatePage" type="MOUSE" > 
-  		<parameter type="STATIC" name="Mouse Action" value="PRESS"/> 
+     <step name="CompliancewireBtn" page="ManageCertificatePage" type="CLICK" >
+     	<token type="DATA" name="courseToAdd" value="Login.Course_Name"/>
+     </step>
+     <step name="CompliancewireBtn" page="ManageCertificatePage" type="MOUSE" >
+     	<parameter type="STATIC" name="Mouse Action" value="PRESS"/>	
+     	<token type="DATA" name="courseToAdd" value="Login.Course_Name"/> 
 	 </step>
 	 <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
   		<parameter type="STATIC" name="Mouse Action" value="MOVE_TO"/> 
@@ -159,7 +164,7 @@
   		<parameter type="STATIC" name="Mouse Action" value="RELEASE"/> 
 	 </step>
 	 <step name="wait" type="WAIT" />
-	 <step name="CompliancewireBtn" page="ManageCertificatePage" type="waitAndClick" />
+<!-- 	 <step name="CompliancewireBtn" page="ManageCertificatePage" type="waitAndClick" />
      <step name="CompliancewireBtn" page="ManageCertificatePage" type="MOUSE" > 
   		<parameter type="STATIC" name="Mouse Action" value="PRESS"/> 
 	 </step>
@@ -168,7 +173,7 @@
 	 </step>
      <step name="Droplocation" page="ManageCertificatePage" type="MOUSE" > 
   		<parameter type="STATIC" name="Mouse Action" value="RELEASE"/> 
-	 </step>
+	 </step> -->
      <step name="Update2Btn" page="ManageCertificatePage" type="waitAndClick" />
 	 <step name="PARENT_FRAME" site="LS176" page="ManageCertificatePage" type="BROWSER" />
 	 <step name="wait" type="WAIT" />
@@ -234,6 +239,13 @@
      <step name="ToDoBtn" page="LearnerViewPage" type="CLICK" />
      <step name="Active06" page="LearnerViewPage" type="CLICK" >
      	<token type="DATA" name="resourceToSearch" value="Login.Resource_Title"/>
+     </step>
+   </function>
+   
+    <function name="OpenCourseAddedInLearnersPlan" active="true">
+     <description>OpenCourseAddedInLearnersPlan</description>
+	  <step name="courseToBeOpened" page="LearnerViewPage" type="CLICK" >
+     	<token type="DATA" name="courseToOpen" value="Login.Course_Name"/>
      </step>
    </function>
    
