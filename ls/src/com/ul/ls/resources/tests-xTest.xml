@@ -31,6 +31,7 @@
 	<step name="TC-2056-TestStep8-ClickOnSaveAndSaveAndClose." site="LS176" type="CALL2" />	
 	<step name="TC-2056-TestStep9-AddAudience" site="LS176" type="CALL2" />
 	<step name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" site="LS176" type="CALL2" />
+	
   </test>
   
 <!--   <test name="TC-2076 Create a new LS course of type online" active="true" priority="1" dataProvider="Login.TC2056"   >

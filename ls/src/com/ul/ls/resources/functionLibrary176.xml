@@ -247,6 +247,27 @@
 	  <step name="courseToBeOpened" page="LearnerViewPage" type="CLICK" >
      	<token type="DATA" name="courseToOpen" value="Login.Course_Name"/>
      </step>
+     
+     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow"/>
+     <step name="CLOSE_WINDOW" page="LearnerViewPage" type="BROWSER" />
+     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow"/>
+     <step name="courseStatus" page="LearnerViewPage" type="EXISTS">
+     	<step name="courseStatus" page="LearnerViewPage" type="REPORT">
+  			<parameter type="STATIC" name="Item One" value="Course Completed"/>
+		</step>
+     </step>
+   </function>
+   
+   <function name="courseAddedInLearningHistory" active="true">
+     <description>CourseAddedInLearningHistory</description>
+	 <step name="MyLearningBtn" page="LearnerViewPage" type="CLICK" />
+     <step name="LearningHistoryLink" page="LearnerViewPage" type="CLICK" />
+     <step name="Active06" page="LearnerViewPage" type="EXISTS" >
+     	<token type="DATA" name="resourceToSearch" value="Login.Resource_Title"/>
+     	<step name="courseStatus" page="LearnerViewPage" type="REPORT">
+  			<parameter type="STATIC" name="Item Two" value="Course Displayed In Learning History"/>
+		</step>
+     </step>
    </function>
    
    <function name="TC2056-Pre-requisit" active="true">
@@ -302,6 +323,8 @@
    	
    <function name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" active="true">
      <step name="IsCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+     <step name="OpenCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+     <step name="courseAddedInLearningHistory" site="LS176"  type="CALL2" />
    </function>
    
    <function name="TC2057-Pre-requisit" active="true">

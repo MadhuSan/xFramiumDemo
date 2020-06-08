@@ -181,8 +181,11 @@
     <page name="LearnerViewPage" class="org.xframium.page.keyWord.KeyWordPage">
 	    <element name="MyLearningBtn" value="(//*[contains(text(),'My Learning')])[2]" descriptor="XPATH" />
 	    <element name="ToDoBtn" value="//a[contains(text(),'Learning Plan')]" descriptor="XPATH" />
+	    <element name="LearningHistoryLink" value="//a[contains(text(),'Learning History')]" descriptor="XPATH" />
 	    <element name="Active06" value="//*[contains(text(),'{resourceToSearch}')]" descriptor="XPATH" />
 	    <element name="courseToBeOpened" value="//a[contains(text(),'{courseToOpen}')]" descriptor="XPATH" />
+	    <element name="courseStatus" value="//a[text()='Online0605']/following::td[text()='Complete']" descriptor="XPATH" />
+	    
     </page>
     
     <page name="EditexistingLScoursePage" class="org.xframium.page.keyWord.KeyWordPage">
