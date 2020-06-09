@@ -54,7 +54,7 @@ driver.configName=../ls/src/com/ul/ls/resources/tests-xTest.xml
 
 # Config for implicit waits
 driver.propertyAdapters=org.xframium.device.property.SeleniumPropertyAdapter
-selenium.timeouts.implicitWait=80000
+selenium.timeouts.implicitWait=70000
 selenium.timeouts.pageLoad=60000
 selenium.timeouts.setScript=30000
 
