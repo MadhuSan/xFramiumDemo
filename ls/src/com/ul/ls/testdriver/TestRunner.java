@@ -10,7 +10,7 @@ public class TestRunner {
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		TestDriver.main(new String[] {"D:\\ls\\src\\com\\ul\\ls\\resources\\driverConfigTXT.txt"});
+		TestDriver.main(new String[] {"../ls/src/com/ul/ls/resources/driverConfigTXT.txt"});
 	}
 
 }
