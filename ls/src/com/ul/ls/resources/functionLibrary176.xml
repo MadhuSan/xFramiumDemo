@@ -191,6 +191,7 @@
      <step name="SWITCH_NAMED_FRAME" page="ManageCertificatePage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
 	 </step>
+	 <step name="wait" type="WAIT"/>
 	 <step name="AudienceTitleTXTBox" page="AudiencePage" type="WaitAndClick" />
       <step name="AudienceTitleTXTBox" page="AudiencePage" type="SET" >
             <parameter type="DATA" value="Login.Audience"/>
@@ -214,6 +215,7 @@
      </step >
      <step name="wait" type="WAIT"/>
      <step name="AddPPLBtn" page="AudiencePage" type="waitAndClick"/>
+     <step name="wait" type="WAIT"/>
      <step name="SaveandCloseBtn" page="AudiencePage" type="waitAndClick" />
      <step name="wait" type="WAIT">
      	<parameter type="STATIC" value="15"/>
@@ -248,9 +250,13 @@
      	<token type="DATA" name="courseToOpen" value="Login.Course_Name"/>
      </step>
      
-     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow"/>
+     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow">
+     	<parameter type="STATIC" name="Item One" value="newWindow"/>
+     </step>
      <step name="CLOSE_WINDOW" page="LearnerViewPage" type="BROWSER" />
-     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow"/>
+     <step name="courseToBeOpened" page="LearnerViewPage" type="switchToNewWindow">
+          	<parameter type="STATIC" name="Item One" value="newWindow"/>
+     </step>
      <step name="courseStatus" page="LearnerViewPage" type="EXISTS">
      	<step name="courseStatus" page="LearnerViewPage" type="REPORT">
   			<parameter type="STATIC" name="Item One" value="Course Completed"/>
@@ -377,37 +383,51 @@
    </function>
    
    <function name="TC2076-TestStep7-ClickonFileManageratthetopmenubar" active="true">
-     <!-- <step name="FileManagerBtn" page="LearningResourcesPage" type="CLICK" />
+      <step name="wait" type="WAIT" />
+     <step name="FileManagerBtn" page="LearningResourcesPage" type="waitAndClick" />
 	 <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
 	 </step>
-	 <step name="UploadFileBtn" page="LearningResourcesPage" type="CLICK" />
 	 <step name="wait" type="WAIT" />
-	 <step name="SelectFiletoUploadBtn" page="LearningResourcesPage" type="CLICK" />
-	 <step name="SelectFiletoUploadBtn" site="LS176" page="LearningResourcesPage" type="SET" >
-            <parameter type="STATIC" value="D:\test.pdf"/>
+	 <step name="UploadFileBtn" page="LearningResourcesPage" type="waitAndClick" />
+	 <!-- <step name="SelectFiletoUploadBtn" page="LearningResourcesPage" type="waitAndClick" /> -->
+	 <step name="wait" type="WAIT" />
+	 <step name="SelectFiletoUploadBtn" page="LearningResourcesPage" type="switchToNewWindow">
+     	<parameter type="STATIC" name="Item One" value="CloseIframeSwitch"/>
+     </step>
+     <step name="wait" type="WAIT" />
+	 <step name="SelectFiletoUploadBtn" page="LearningResourcesPage" type="fileUpload" >
+            <parameter type="STATIC" value="ruFileInput"/>
+            <parameter type="STATIC" value="test.pdf"/> 
      </step >
      <step name="wait" type="WAIT" />
-     <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
-  		<parameter type="STATIC" name="Frame Name" value="WdwClose"/> 
-	 </step>
-	 <step name="wait" type="WAIT" />
-     <step name="SetStartingLinkBtn" page="LearningResourcesPage" type="CLICK" /> -->
+     <step name="SetStartingLinkBtn" page="LearningResourcesPage" type="switchToNewWindow">
+     	<parameter type="STATIC" name="Item One" value="CloseIframeSwitch"/>
+     </step>
+     <step name="FileToUpload" page="LearningResourcesPage" type="waitAndClick" />
+      <step name="wait" type="WAIT" />
+     <step name="SetStartingLinkBtn" page="LearningResourcesPage" type="waitAndClick" />
+     <step name="OK2Btn" page="LearningResourcesPage" type="CLICK" />
+     <step name="OK2Btn" page="LearningResourcesPage" type="CLICK" />
      <step name="wait" type="WAIT" />
    </function>
    
    <function name="TC2076-TestStep11-ClickonOKandGotToOnlineTabr" active="true">
-     <!-- <step name="OK2Btn" page="LearningResourcesPage" type="CLICK" />
-     <step name="wait" type="WAIT" /> -->
-     <step name="On-LineBtn" page="On-LinePage" type="CLICK" />
-     <step name="ScoreModelDropdn" page="On-LinePage" type="CLICK" />
-     <step name="DropdnValue" page="On-LinePage" type="CLICK" />
-     <!-- <step name="VerifyLocationpath" page="On-LinePage" type="GET" >
-		<parameter type="STATIC" value="Location" />
-	 </step> -->
-	 <step name="SaveandCloseBtn" page="On-LinePage" type="CLICK" />
+     <step name="SelectScoreModelOnlineTab" type="CALL2"> 
+     	<parameter type="STATIC" name="scoreModel" value="The resource is marked complete upon entry (launch)"/>
+     </step>
    </function>
    
+   <function name="SelectScoreModelOnlineTab" active="true">
+	     <step name="SwitchToMainWindow" page="LearningResourcesPage" type="switchToNewWindow">
+	     	<parameter type="STATIC" name="Item One" value="MainIframeSwitch"/>
+	     </step>
+	     <step name="On-LineBtn" page="On-LinePage" type="CLICK" />
+	     <step name="ScoreModelDropdn" page="On-LinePage" type="waitAndClick" />
+	     <step name="scoreModelDropdn" page="On-LinePage" type="CLICK" >
+	         <token type="CONTEXT" name="scoreOption" value="scoreModel"/>
+	     </step>
+   </function>
    <function name="TC-2076-TestStep14-" active="true">
    	 <step name="SearchTxtBox" page="LearningResourcesPage" type="CLICK" />
    	 <step name="SearchTxtBox" site="LS176" page="LearningResourcesPage" type="SET" >
@@ -420,10 +440,13 @@
    
    <function name="TC-2076-TestStep15-AddAudience" active="true">
 	 <step name="AddAudience" site="LS176"  type="CALL2" />
+	 <step name="ExitToLMS" site="LS176"  type="CALL2" />
    	</function>
    
    <function name="TC-2076-TestStep16-IsCourseAddedInLearnersPlan" active="true">
      <step name="IsCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+    <step name="OpenCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+     <step name="courseAddedInLearningHistory" site="LS176"  type="CALL2" />
    </function>
    
    

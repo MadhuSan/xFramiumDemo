@@ -112,13 +112,16 @@
   	<element name="SelectFiletoUploadBtn" value="//li[@class='ruSelectWrap']" descriptor="XPATH" />
   	<element name="SetStartingLinkBtn" value="//span[contains(text(),'Set Starting Link')]" descriptor="XPATH" />
   	<element name="OK2Btn" value="//button[@class='rwOkBtn t-ripple-effect']" descriptor="XPATH" />
+  	<element name="FileToUpload" value="[id='ctl00_C_dgdFiles_ctl00']" descriptor="CSS" />
+  	
   	</page>
   	
   	<page name="On-LinePage" class="org.xframium.page.keyWord.KeyWordPage">
-  	<element name="closeBtn" value="//li[@class='rwListItem']" descriptor="XPATH" />
+  	<element name="closeBtn" value="a[title='Close']" descriptor="CSS" />
   	<element name="On-LineBtn" value="//span[@class='rtsTxt' and contains(text(),'On-Line')]" descriptor="XPATH" />
   	<element name="VerifyLocationpath" value="(//input[@class='rfdTextInput'])[1]" descriptor="XPATH" />
-  	<element name="ScoreModelDropdn" value="(//span[@class='rfdDropDownArrow p-icon p-i-arrow-down'])[3]" descriptor="XPATH" />
+  	<element name="ScoreModelDropdn" value="[id='Skinnedctl00_C_cboScoreModel'] [class='rfdDropDownArrow p-icon p-i-arrow-down']" descriptor="CSS" />
+  	<element name="scoreModelDropdn" value="//li[text()='{scoreOption}']" descriptor="XPATH" />
   	<element name="DropdnValue" value="(//li[@class='t-ripple-effect'])[2]" descriptor="XPATH" />
   	<element name="SaveandCloseBtn" value="(//*[contains(text(),'Save and Close')])[1]" descriptor="XPATH" />
   	</page>
