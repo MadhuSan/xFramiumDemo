@@ -18,7 +18,7 @@
      <step name="createPersonFunction" site="LS" type="CALL2" />
   </test> -->
   
-  <test name="TC-2056 Create a new LS course of type certificate" active="false" priority="1" dataProvider="Login.TC2056"   >
+  <test name="TC-2056 Create a new LS course of type certificate" active="true" priority="1" dataProvider="Login.TC2056"   >
      <description>Objective:1.Create a new LS course of type certificate. 2. Verify that the created course is reflected as Required in Learning Plan</description>
 	<step name="TC2056-Pre-requisit" site="LS176" type="CALL2" />
 	<step name="TC2056-TestStep1-ClickonNewTabAtTheTopMenuBar" type="CALL2" />
