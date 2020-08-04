@@ -11,6 +11,44 @@
 </model>
 
 
+<!--   <function name="AddPlace" active="true">
+	<step name="CALL WS" page="Home" type="EXECWS" context="my-context" >
+     <parameter type="STATIC" name="url" value="https://jsonplaceholder.typicode.com/users" usage="input" />
+     <parameter type="STATIC" name="method" value="GET" usage="input" />
+     <parameter type="STATIC" name="media-type" value="text/json" usage="input" />
+     <parameter type="STATIC" name="type" value="REST" usage="input" />
+     <parameter type="FILE" name="payload" value="../ls/src/com/ul/ls/resources/payload.json" usage="input">
+          <token type="STATIC" name="Content-Type" value="application/xml" />
+          <token type="STATIC" name="Key" value="Key" />
+          <token type="STATIC" name="Value" value="qaclick123" />
+     </parameter>
+     <parameter type="STATIC" name="type" value="json" usage="output" />
+     <parameter type="STATIC" name="var1" value="//LoanMonthlyPaymentResult" usage="output" />
+	</step>
+  </function> -->
+  
+   <function name="GET_Json" active="true">
+	<step name="CALL WS" page="Home" type="EXECWS" context="my-context" >
+     <parameter type="STATIC" name="url" value="https://jsonplaceholder.typicode.com/users" usage="input" />
+     <parameter type="STATIC" name="method" value="GET" usage="input" />
+     <parameter type="STATIC" name="type" value="REST" usage="input" />
+     <parameter type="STATIC" name="type" value="json" usage="output" />
+	</step>
+  </function>
+  
+ <function name="POST_Json" active="true">
+	<step name="CALL WS" page="Home" type="EXECWS" context="my-context" >
+     <parameter type="STATIC" name="url" value="https://jsonplaceholder.typicode.com/users" usage="input" />
+     <parameter type="STATIC" name="method" value="POST" usage="input" />
+     <parameter type="STATIC" name="media-type" value="text/json" usage="input" />
+     <parameter type="STATIC" name="type" value="REST" usage="input" />
+     <parameter type="FILE" name="payload" value="../ls/src/com/ul/ls/resources/payload.json" usage="input">
+          <token type="STATIC" name="Content-Type" value="application/xml" />
+     </parameter>
+     <parameter type="STATIC" name="type" value="json" usage="output" />
+	</step>
+  </function>
+
   <function name="loginFunction" active="true">
      <description>Login</description>
      <step name="UNTxtbox.VISIBLE" page="loginPage" type="WAIT_FOR">
@@ -110,7 +148,8 @@
      <description>createnewLeaningResourcebtn</description>
      <step name="SWITCH_NAMED_FRAME" page="LearningResourcesPage" type="BROWSER" > 
   		<parameter type="STATIC" name="Frame Name" value="wdwMain1"/> 
-	 </step> 
+	 </step>
+	 <step name="wait" type="WAIT"/> 
 	 <step name="NewBtn" page="LearningResourcesPage" type="waitAndClick" />
      <step name="NewBtn" page="LearningResourcesPage" type="CLICK" />
    </function>

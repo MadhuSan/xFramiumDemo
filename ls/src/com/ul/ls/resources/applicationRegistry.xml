@@ -3,6 +3,6 @@
 
   <application name="LS" url="https://weekly.learnshare.com/authenticate/login.brand.aspx?CID=94" />
   <application url="https://lms2.learnshare.com/authenticate/login.brand.aspx?CID=252" name="LS176"/>
-  <application url="https://qa.learnshare.com/authenticate/login.brand.aspx?CID=176" name="LSOA176"/>
+  <application url="https://qa.learnshare.com/authenticate/login.brand.aspx?CID=176" name="LSQA176"/>
 
 </applicationRegistry>

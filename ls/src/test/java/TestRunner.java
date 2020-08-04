@@ -3,6 +3,8 @@ package test.java;
 import org.testng.annotations.Test;
 import org.xframium.driver.TestDriver;
 
+import io.restassured.RestAssured;
+
 public class TestRunner {
   @Test
   public void f() {

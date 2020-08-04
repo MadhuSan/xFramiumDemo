@@ -16,5 +16,31 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/json-path-4.3.0-deps/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/json-path-4.3.0-deps/groovy-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/json-path-4.3.0-deps/groovy-json-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/json-path-4.3.0-dist/json-path-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/json-schema-validator-4.3.0-dist/json-schema-validator-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/kotlin-extensions-4.3.0-dist/kotlin-extensions-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/activation-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/commons-lang3-3.4.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/groovy-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/groovy-json-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/groovy-xml-3.0.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/hamcrest-2.1.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/httpmime-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/jakarta.activation-api-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/jakarta.xml.bind-api-2.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/jaxb-osgi-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/org.apache.sling.javax.activation-0.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-deps/tagsoup-1.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/rest-assured-4.3.0-dist/rest-assured-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/spring-mock-mvc-4.3.0-dist/spring-mock-mvc-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/spring-web-test-client-4.3.0-dist/spring-web-test-client-4.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/RestAPI/RestAssured_Jars/xml-path-4.3.0-dist/xml-path-4.3.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

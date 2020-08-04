@@ -18,7 +18,7 @@
   
   <model provider="XML" fileName="pageElements.xml" siteName="LS" />
   
-  <suite provider="GHERKIN" fileName="D:/workspace_ls/ls/src/com/ul/ls/features/CreateUser.feature">
+  <suite provider="GHERKIN" fileName="D:/workspace_ls/ls/src/com/ul/ls/features/">
   	<packages>
   		<package name="com.ul.ls.cucumbersteps">Pull from the package</package>
   	</packages>

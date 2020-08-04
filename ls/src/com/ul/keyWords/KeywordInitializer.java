@@ -12,6 +12,8 @@ public class KeywordInitializer implements Initializable {
 		KeyWordStepFactory.instance().addKeyWord( "waitAndClick", KWSWaitAndClick.class );
 		KeyWordStepFactory.instance().addKeyWord( "switchToNewWindow", KWSSwitchToNewWindow.class );
 		KeyWordStepFactory.instance().addKeyWord( "fileUpload", KWSFileUpload.class );
+		KeyWordStepFactory.instance().addKeyWord( "SSLHandShakeException", KWSSSLHandShakeException.class );
+		
 	}
 
 
