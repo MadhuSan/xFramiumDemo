@@ -188,6 +188,7 @@
 	    <element name="Active06" value="//*[contains(text(),'{resourceToSearch}')]" descriptor="XPATH" />
 	    <element name="courseToBeOpened" value="//a[contains(text(),'{courseToOpen}')]" descriptor="XPATH" />
 	    <element name="courseStatus" value="//a[text()='Online0605']/following::td[text()='Complete']" descriptor="XPATH" />
+	    <element name="takeCourse" value="div.col-md-9 button#TakeCourseButton" descriptor="CSS" />
 	    
     </page>
     

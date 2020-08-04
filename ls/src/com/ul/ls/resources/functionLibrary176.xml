@@ -302,10 +302,14 @@
 		</step>
      </step>
    </function>
+   <function name="takeCourseAddedInLearnersPlan" active="true">
+     <description>TakeCourseAddedInLearner'sPlan</description>
+	  <step name="takeCourse" page="LearnerViewPage" type="CLICK"/>
+   </function>
    
    <function name="courseAddedInLearningHistory" active="true">
      <description>CourseAddedInLearningHistory</description>
-	 <step name="MyLearningBtn" page="LearnerViewPage" type="CLICK" />
+	 <step name="MyLearningBtn" page="LearnerViewPage" type="waitAndClick" />
      <step name="LearningHistoryLink" page="LearnerViewPage" type="CLICK" />
      <step name="Active06" page="LearnerViewPage" type="EXISTS" >
      	<token type="DATA" name="resourceToSearch" value="Login.Resource_Title"/>
@@ -484,7 +488,7 @@
    
    <function name="TC-2076-TestStep16-IsCourseAddedInLearnersPlan" active="true">
      <step name="IsCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
-    <step name="OpenCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
+    <step name="takeCourseAddedInLearnersPlan" site="LS176"  type="CALL2" />
      <step name="courseAddedInLearningHistory" site="LS176"  type="CALL2" />
    </function>
    
