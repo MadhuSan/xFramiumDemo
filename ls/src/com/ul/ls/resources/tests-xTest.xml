@@ -10,13 +10,9 @@
 </model>
 
 
-  <!--  <test name="createUser" active="true" priority="1">
-     <description>Login</description>
-     <step name="loginFunction" site="LS" page="loginPage" type="CALL2" />
-     <step name="navigateToAdministratorToolsFunction" site="LS" type="CALL2" />
-     <step name="navigateToMaintainPeopleandSecurityFunction" site="LS" type="CALL2" />
-     <step name="createPersonFunction" site="LS" type="CALL2" />
-  </test> -->
+  <test name="createUser" active="false" priority="1">
+     <step name="POST_Json"  type="CALL2" />
+  </test>
   
   <test name="TC-2056 Create a new LS course of type certificate" active="true" priority="1" dataProvider="Login.TC2056"   >
      <description>Objective:1.Create a new LS course of type certificate. 2. Verify that the created course is reflected as Required in Learning Plan</description>
@@ -30,11 +26,10 @@
 	<step name="TC-2056-TestStep7-SelectAResourceOnTheLeftSide,DragAndDropToYourCreatedResourceOnTheRightSideBlockAndClickOnUpdate." site="LS176" type="CALL2" />
 	<step name="TC-2056-TestStep8-ClickOnSaveAndSaveAndClose." site="LS176" type="CALL2" />	
 	<step name="TC-2056-TestStep9-AddAudience" site="LS176" type="CALL2" />
-	<step name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" site="LS176" type="CALL2" />
-	
+	<step name="TC-2056-TestStep10-IsCourseAddedInLearnersPlan" site="LS176" type="CALL2" />	
   </test>
   
-  <test name="TC-2076 Create a new LS course of type online" active="true" priority="1" dataProvider="Login.TC2076"   >
+  <test name="TC-2076 Create a new LS course of type online" active="true" priority="2" dataProvider="Login.TC2076"   >
      <description>Objective:1.Create a new LS course of type online. 2. Verify that the created course is reflected as Required in Learning Plan</description>
 	<step name="TC2076-TestStep1-EntervalidusernameandpasswordandlogintotheLSapplication" site="LS176" type="CALL2" />
 	<step name="TC2076-TestStep2 and 3-GotoAdminprofile-->ClickonAdministratorTools" type="CALL2" />
